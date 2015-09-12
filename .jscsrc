@@ -1,0 +1,11 @@
+{
+  "preset": "airbnb",
+  "requireCamelCaseOrUpperCaseIdentifiers" : "ignoreProperties",
+  "excludeFiles": [
+    "./HelloWorld/Frontend/js/framework.js",
+    "./bin/**/*"
+  ],
+  "requirePaddingNewLinesAfterBlocks": {
+    "allExcept": ["inCallExpressions"/*, "inNewExpressions", "inArrayExpressions", "inProperties"*/]
+  }
+}

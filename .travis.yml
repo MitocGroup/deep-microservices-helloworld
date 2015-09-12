@@ -1,0 +1,23 @@
+language: node_js
+sudo: false
+node_js:
+- '0.12'
+
+branches:
+  only:
+  - master
+  - stage
+  - test
+  - dev
+
+env:
+  global:
+  - secure: KurEC9l4DuUCNSx8A4s6jli+b0zDW/ebLSJFUHOit6nRA4Wn8Iyu/Ai3LwoCw6IKrrWTrpvcHeuhew4oR331IdIz1hb1yecf8R/5UwEaErhClKHMmPBEzeXoR60YNGbYgGPNiarNjqEmy0WYxA1JhXjSwLOgZjRLhQo+hon+lwXig0ioXliXupE0uG32P7qbISFJlaknkqVm3KVPDt+pJOM9GcD2JHe32XVa7XhkFe+FXuCOr9XmwG9mjCmlxZvfWXhXeKEvwbHWLsKkiPftARl+Vy98hj/mFwdzMRnDNIA8wcoP2dMRccR0E4gqDS0BPpSp3aKKrVw0a84THISgm/+Ts7YYHcCPUNdu3n/zxpgr3ZB650pcpv800AIbTuQQwM5q/arjAyc60sFXdTesbFpq74FN4dUpWkKh6cT3pscbXzZrwMq+yzj1ZuA2onfxhrQpIicKTQ5fY/zY0tMTfs7WXS85x/Y1/c0/dOSquBNxkq5/lVYqgLRNMcShqy48wKIXdARwM+WZjnmCDAe1BKjhrmpuMSmbgYFMQGRDf1yjwWLGHxLGrqAep+oYQVv25d/6s6T4IANk5RuqmnASjLL72joxTmWw9kLdDmGEO8l3iJvVBcJnkF3oh8uk5/pwDSwHU/EhHDuHj15xRaAmPeDz2oe3YE+znMx7EbxZt5I=
+
+before_install:
+- npm install -g jspm
+- jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
+
+after_success:
+- npm run coverage
+
