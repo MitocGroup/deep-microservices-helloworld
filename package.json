@@ -40,7 +40,8 @@
   "devDependencies": {
     "jscs": "~2.1.1",
     "jspm": "~0.16.2",
-    "babel": "~5.8.23",
+    "babel": "~5.6.23",
+    "babel-runtime": "~5.8.20",
     "browserify": "~11.1.0",
     "mocha": "~2.3.2",
     "mocha-babel": "~3.0.0",
