@@ -5,7 +5,7 @@ DEEP Microservices HelloWorld
 [![Build Status](https://travis-ci.org/MitocGroup/deep-microservices-helloworld.svg)](https://travis-ci.org/MitocGroup/deep-microservices-helloworld)
 [![Dependencies Status](https://david-dm.org/MitocGroup/deep-microservices-helloworld.svg)](https://david-dm.org/MitocGroup/deep-microservices-helloworld)
 [![Coverage Status](https://coveralls.io/repos/MitocGroup/deep-microservices-helloworld/badge.svg)](https://coveralls.io/r/MitocGroup/deep-microservices-helloworld)
-[![Codacy Badge](https://api.codacy.com/project/badge/46841776f9044f018f0a71b3e114299d)](https://www.codacy.com/app/MitocGroup/deep-microservices-helloworld/dashboard)
+[![Codacy Badge](https://api.codacy.com/project/badge/b7e24fb220d644728d84742d478ae709)](https://www.codacy.com/app/MitocGroup/deep-microservices-helloworld)
 
 ## License
 
