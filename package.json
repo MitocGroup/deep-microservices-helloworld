@@ -36,7 +36,7 @@
     "microservices",
     "helloworld",
     "hello world"
-  }.
+  },
   "scripts": {
     "postinstall": "cd bin && npm install && cd ..",
     "install": "if [ -f '.travis.yml' ]; then test/bin/install.sh; else bin/install.sh; fi",
@@ -72,4 +72,3 @@
     "karma-ng-html2js-preprocessor": "~0.1.2"
   }
 }
-
