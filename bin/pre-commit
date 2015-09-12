@@ -25,7 +25,8 @@ done
 echo -e "\nJavaScript validation complete\n"
 
 if ! $pass; then
-    echo -e "\033[41mCOMMIT FAILED:\033[0m Your commit contains files that should pass JSCS but do not. Please fix the JSCS errors and try again.\n"
+    echo -e "\033[41mCOMMIT FAILED:\033[0m Your commit contains files that should pass JSCS but do not.\n"
+    echo -e "\033[41mPlease fix the JSCS errors and try again!\033[0m\n"
     exit 1
 else
     echo -e "\033[42mCOMMIT SUCCEEDED\033[0m\n"

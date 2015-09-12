@@ -8,15 +8,17 @@ jscs=`which jscs`
 if [ -z ${jscs} ]; then
     if [ -z ${npm} ]; then
         if [ -z ${brew} ]; then
-            echo "You may install Homebrew first!"
+            echo "Homebrew is missing!"
             exit 1
         fi
 
-        echo "Installing nodejs..."
+        echo "Installing nodejs ..."
         ${brew} install nodejs
 
         npm=$(which npm)
     fi
+
+    echo "Installing jscs ..."
     ${npm} install jscs -g
 fi
 
