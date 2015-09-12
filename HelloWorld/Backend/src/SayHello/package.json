@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@mitocgroup/deep-framework": "0.1.*",
-    "babel": "5.6.*",
+    "babel": "5.8.*",
     "babel-runtime": "5.8.*"
   },
   "devDependencies": {

@@ -44,7 +44,7 @@
     "coverage": "if [ -f 'bin/coverage.sh' ]; then bin/coverage.sh; else test/bin/coverage.sh; fi"
   },
   "dependencies": {
-    "babel": "5.6.*",
+    "babel": "5.8.*",
     "babel-runtime": "5.8.*"
   },
   "devDependencies": {
