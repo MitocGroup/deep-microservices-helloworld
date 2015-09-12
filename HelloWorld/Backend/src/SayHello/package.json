@@ -1,40 +1,42 @@
 {
-  "name": "say-hello-test",
+  "name": "deep-microservices-say-hello",
+  "description": "Digital Enterprise End-to-end Platform Microservices, Say Hello to the World",
   "version": "0.0.1",
-  "description": "Lambda that says hello to the world",
-  "author": "Mitoc Group <hello@mitocgroup.com>",
+  "private": true,
+  "author": {
+    "name": "Mitoc Group",
+    "email": "hello@mitocgroup.com",
+    "website": "www.mitocgroup.com"
+  },
   "contributors": [
     {
-      "name": "AlexanderC",
-      "email": "alexanderc@mitocgroup.com"
-    },
-    {
-      "name": "Marcel Goria",
-      "email": "mgoria@mitocgroup.com"
-    },
-    {
-      "name": "Veaceslav Cotruta",
-      "email": "vcotruta@mitocgroup.com"
+      "name": "DEEP Dev Team",
+      "email": "hello@deep.mg",
+      "website": "www.deep.mg"
     }
   ],
-  "bugs": {
-    "url": "https://github.com/MitocGroup/deep/issues"
-  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
   "keywords": [
-    "DEEP",
-    "Digital Enterprise End-To-End Platform",
-    "Hello World"
+    "deep",
+    "digital",
+    "platform",
+    "helloworld",
+    "hello world"
   ],
   "scripts": {
     "postinstall": "BABEL_ENV=production babel -x \".es6\" ./ --out-dir ./"
   },
   "dependencies": {
-    "@mitocgroup/deep-framework": "*",
+    "@mitocgroup/deep-framework": "0.1.*",
     "babel-core": "5.5.*"
   },
   "devDependencies": {
   },
   "preferGlobal": false,
-  "private": true,
   "analyze": true
 }
