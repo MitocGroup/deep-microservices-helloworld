@@ -39,9 +39,9 @@
   ],
   "scripts": {
     "postinstall": "cd bin && npm install && cd ..",
-    "install": "if [ -f '.travis.yml' ]; then test/bin/install.sh; else bin/install.sh; fi",
-    "test": "if [ -f '.travis.yml' ]; then test/bin/test.sh; else bin/test.sh; fi",
-    "coverage": "if [ -f '.travis.yml' ]; then test/bin/coverage.sh; else bin/coverage.sh; fi"
+    "install": "if [ -f 'bin/install.sh' ]; then bin/install.sh; else test/bin/install.sh; fi",
+    "test": "if [ -f 'bin/test.sh' ]; then bin/test.sh; else test/bin/test.sh; fi",
+    "coverage": "if [ -f 'bin/coverage.sh' ]; then bin/coverage.sh; else test/bin/coverage.sh; fi"
   },
   "dependencies": {
   },
