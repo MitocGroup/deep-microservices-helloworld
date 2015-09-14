@@ -1,22 +1,11 @@
 #!/usr/bin/env bash
 
-################################
-### Define Global Parameters ###
-################################
 __SCRIPT_PATH=$(cd $(dirname $0); pwd -P)
+__RES_PATH="${__SCRIPT_PATH}/../resources"
+
 __ROOT_PATH="${__SCRIPT_PATH}/../../"
-__COVERAGE_PATH=${__SCRIPT_PATH}"/../coverage/"
+__SRC_PATH="${__ROOT_PATH}src/"
 
-
-#########################################
-### Define Path for Each Microservice ###
-#########################################
-__MICROSERVICE_HELLOWORLD_PATH="${__ROOT_PATH}HelloWorld/Frontend/js/"
-
-
-###############################
-### Define Global Functions ###
-###############################
 subpath_run_cmd () {
     local DIR
     local CMD
@@ -25,7 +14,18 @@ subpath_run_cmd () {
     DIR=$(cd $1 && pwd -P)
     CMD=$2
 
-    cd $DIR/${subpath} && eval_or_exit "$CMD"
+    if [ -z $3 ]; then
+        EXPR="*"
+    else
+        EXPR=$3
+    fi
+
+    for subpath in $DIR/$EXPR
+    do
+        if [ -d ${subpath} ]; then
+            cd ${subpath} && eval_or_exit "$CMD"
+        fi
+    done
 }
 
 eval_or_exit() {
@@ -41,4 +41,3 @@ eval_or_exit() {
         exit 1
     fi
 }
-

@@ -1,0 +1,21 @@
+{
+  "name": "HelloWorld",
+  "propertyRoot": true,
+  "identifier": "hello.world.example",
+  "description": "Example microservice that does hello world",
+  "version": "0.0.1",
+  "author": {
+    "name": "Mitoc Group", 
+    "email": "hello@mitocgroup.com",
+    "website": "www.mitocgroup.com"
+  },
+  "contributors": [
+    {
+      "name": "DEEP Dev Team",
+      "email": "hello@deep.mg",
+      "website": "www.deep.mg"
+    }
+  ],
+  "dependencies": {
+  }
+}

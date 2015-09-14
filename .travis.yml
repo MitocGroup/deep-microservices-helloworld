@@ -3,6 +3,10 @@ sudo: false
 node_js:
 - '0.12'
 
+cache:
+  directories:
+  - "$(npm root -g)"
+
 branches:
   only:
   - master
@@ -10,15 +14,17 @@ branches:
   - test
   - dev
 
-env:
-  global:
-  - secure: OklCqWtuqYFX30C/dVIBUmVc87ctobQoybheAVjZSqZJ6coYh9LSaNzQVJSMjKZCusGkYTyn0B4MYmeAftlzDA6BgQ2L/dYRi7JNaxm1QlfzUY8lD+6P7fueRnQg4sLypzmy3/b7/H7gGpBRfSVDDUh8HSRR1VXTUV+zHexCAdI3xdsTS8icwvadOQHNZ2GQd5NS7SiPrxX0gT4ktcNyJQrrCJNhE5fFs84ICS8kKfwLSgvOb1V8YcnKy26sRjdRo/bkfxIJv0rjluX/IdJEE49mkL1llCwQ0tG5IG2saSJKGy3/qNsJry42WGN83MAKkvx6Fg2UeA8ObRPMr6y/BWITVyWGtVXE5At1oMjMNG2kvnKOCeiU6UNuT+9QdquHCVyOQENnL2d7QC1fCoVnOHbap+b5TPM13pAsyofTg59UEE0taW91j2wAG/Dgdn9WknZA51vg0m/v3GXY13go4IqqSTkH2jzvn4Ce5qvwvPZkgVbOIVC5fprRgQfahURu/pda56teKWioLaNRjvP9aTuGoCTLUzU8vU+pRK0S7M213fzsVXYaqobArqS+p8y/ez/6jRKieakBuKRbMUdWSn5JVAgCwIAXH6mOYE2+1NUiub8zE05VpeU9eD9XbHiEjjnJYrruNocLi/qzzgM9SM2JmsXx2e2rNba7cUBMjRU=
-  - secure: ZvhHrnpiJg74IQzcHTMD38aL3cvc3hCRTEmcFLr0HZ32o/3EN64UiiV0RFYXFl+JtYCEX5Nav1GyJ/34jFPLFhzpk8xbyLqhv48ZZR+ApU9bun3gbxZXigMBSf3eTKz8nXReXn2D4La8Qd7lDIjSSrrawkaXWszpSx8SZlxHsl8YpGS3SDzjsh8C2zjRweMlswUdKp7kdD93hshXAHU4lxSBpKWTP0zM2rL4WPe5qPEAH29cePo5lJw6awPGb685I6hT6akdrbPLsMIG3fN94+1EVbvEvKUXnmwZqQm5WVO3CEC+EbZvtMmSFWZknJVpj6Bp50Bzbpq/PNiMnvV3znwK4fyEJRI/Z4YJHO4b0HxUIaPPQjhCWjHtKtNXSrX8Cyqgm93G8axuOHEN9ysM/DaFSTjkHCueI3Z6wuMFBK/RZEEOuzz+xReRfKMNYesmM0S/o2L27XAz5dRHS7LHZS6gx1sAYGPh0YqotXgNNFmyRNuVP61tqstxgOTA3iycTLKO0CpdAJtqaYYxWEf4rC9ulRd6MBmwZhwPf/k5f6/0hmqdOWol3lb0Cd7uRo1H9OHWsaYspvjzfoXbtxrrJ0hRBSv0MDYad4so3b3zioM41lpe940mAMG2EmuRFCYykPkHakYNulNvmaiWb/yJ5vesGS+p0zFI8L0DuoCCVQw=
-
 before_install:
 - npm install -g babel
-- npm install -g jspm
-- jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
+- npm install -g browserify
+- npm install -g mocha
+- npm install -g mocha-babel
+- npm install -g istanbul
+- npm install -g coveralls
+- npm install -g codacy-coverage
+- npm install -g istanbul-combine
+- cp test/package.json .
+- test/bin/setup_npm.sh
 
 after_success:
 - npm run coverage

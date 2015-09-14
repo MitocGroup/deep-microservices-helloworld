@@ -1,25 +1,12 @@
 #!/usr/bin/env bash
 
-path=$(cd $(dirname $0); pwd -P)
-npm=$(which npm)
-brew=$(which brew)
+source $(dirname $0)/_head.sh
 jscs=`which jscs`
 
 if [ -z ${jscs} ]; then
-    if [ -z ${npm} ]; then
-        if [ -z ${brew} ]; then
-            echo "Homebrew is missing!"
-            exit 1
-        fi
+    assure_npm
 
-        echo "Installing nodejs ..."
-        ${brew} install nodejs
-
-        npm=$(which npm)
-    fi
-
-    echo "Installing jscs ..."
-    ${npm} install jscs -g
+    ${npm} -g install jscs
 fi
 
 if [ -f ${path}/../.git/hooks/pre-commit ]; then
