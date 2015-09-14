@@ -5,17 +5,25 @@
   "description": "Example microservice that does hello world",
   "version": "0.0.1",
   "author": {
-    "name": "Mitoc Group", 
-    "email": "hello@mitocgroup.com",
-    "website": "www.mitocgroup.com"
+    "name": "Mitoc Group",
+    "email": "hello@mitocgroup.com"
   },
   "contributors": [
     {
-      "name": "DEEP Dev Team",
-      "email": "hello@deep.mg",
-      "website": "www.deep.mg"
+      "name": "AlexanderC",
+      "email": "alexanderc@mitocgroup.com"
+    },
+    {
+      "name": "Marcel Goria",
+      "email": "mgoria@mitocgroup.com"
+    },
+    {
+      "name": "Veaceslav Cotruta",
+      "email": "vcotruta@mitocgroup.com"
     }
   ],
+  "website": "https://www.deep.mg",
+  "email": "hello@mitocgroup.com",
   "dependencies": {
   }
 }
