@@ -106,10 +106,5 @@ npm-debug.log
 
 
 #####=== Proprietary ===#####
-lib/*.pack/*
-src/*.pack/*
-lib/*/*.compiled
-src/*/*.compiled
-lib.compiled/*
+lib.compiled
 /tests/*
-coverage/*
