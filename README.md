@@ -17,6 +17,20 @@ DEEP is using [microservices architecture](https://en.wikipedia.org/wiki/Microse
 
 > [DEEP Marketplace](https://www.deep.mg) (aka [www.deep.mg](https://www.deep.mg)) is a web application built using DEEP and published on serverless environment from [Amazon Web Services](https://aws.amazon.com) (aka [aws.amazon.com](https://aws.amazon.com)). We make it faster and easier for developers to build and publish their software, as well as for businesses to discover and test applications they are looking for. Our goal is to connnect businesses with developers, and empower technical teams to build self-service software that none technical teams could use. The marketplace is like Apple's App Store or Google's Play for web applications that run natively on cloud providers like AWS.
 
+## Get Started
+
+    # Install deepify, aka DEEP CLI
+    npm install deepify -g
+
+    # Using deepify, create DEEP Microservice HelloWorld
+    deepify helloworld ~/deep-hello-world
+
+    # Run DEEP Microservice HelloWorld locally
+    deepify server ~/deep-hello-world
+
+    # Deploy DEEP Microservice HelloWorld to AWS
+    deepify deploy ~/deep-hello-world
+
 ## License
 
 This repository can be used under the MIT license.
