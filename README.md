@@ -26,7 +26,7 @@ DEEP is using [microservices architecture](https://en.wikipedia.org/wiki/Microse
     deepify helloworld ~/deep-hello-world
 
     # Run DEEP Microservice HelloWorld locally
-    deepify server ~/deep-hello-world
+    deepify server ~/deep-hello-world -o
 
     # Deploy DEEP Microservice HelloWorld to AWS
     deepify deploy ~/deep-hello-world
