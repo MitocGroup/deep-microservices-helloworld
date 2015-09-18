@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "description": "DEEP Micro Services Hello World Backend",
   "scripts": {
-    "installs": "npm install",
+    "install": "npm install",
     "test": "echo \"No test specified for backend\" && exit 0",
-    "testF": "mocha --ui tdd --compilers js:mocha-babel --recursive --reporter spec",
     "coverage": "echo \"No coverage specified\" && exit 0"
   },
   "dependencies": {},
