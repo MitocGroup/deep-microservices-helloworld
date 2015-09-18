@@ -17,9 +17,9 @@ export class SayHelloController {
       Name: this.name,
     };
 
-    this._helloResource.request('say-hello', payload).send(function(response) {
+    this._helloResource.request('say-hello', payload).send((response) => {
       this.data = JSON.stringify(response.data, null, '  ');
-    }.bind(this));
+    });
   }
 }
 

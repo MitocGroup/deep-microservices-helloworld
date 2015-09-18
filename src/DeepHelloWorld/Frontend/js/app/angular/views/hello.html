@@ -1,10 +1,10 @@
 <h1>DEEP Microservice: Hello World</h1>
 
 <p>
-    <form id="hello-form" ng-submit="catchSubmit">
-        <input type="text" ng-bind="name" placeholder="Type your name"/>
-        <input type="submit" value="Send"/>
-    </form>
+<form ng-submit="catchSubmit()">
+    <input type="text" ng-model="name" placeholder="Type your name"/>
+    <input type="submit" value="Send"/>
+</form>
 
-    <pre ng-bind="data"></pre>
+<pre ng-bind="data"></pre>
 </p>
