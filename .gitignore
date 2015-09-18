@@ -108,3 +108,9 @@ npm-debug.log
 #####=== Proprietary ===#####
 lib.compiled
 /tests/*
+
+**/Frontend/vendor/
+.idea/
+.parameters.json
+.DS_Store
+deeploy.json

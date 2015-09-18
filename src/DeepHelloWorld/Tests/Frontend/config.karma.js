@@ -32,7 +32,7 @@ module.exports = function(config) {
       },
       loadFiles: [
         'Tests/Frontend/**/*.spec.js',
-        'Frontend/js/bootsrap.js',
+        'Frontend/js/bootstrap.js',
       ],
       serveFiles: [
         'Frontend/**/*.js',
