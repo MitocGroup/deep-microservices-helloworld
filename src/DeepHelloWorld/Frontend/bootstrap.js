@@ -1,7 +1,7 @@
 'use strict';
 
 export default function deepHelloWorld() {
-  return System.import('/hello.world.example/js/angular/index');
+  return System.import('/hello.world.example/js/app/angular/index');
 };
 
 export function configLoad() {
