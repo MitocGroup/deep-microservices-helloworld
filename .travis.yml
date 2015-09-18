@@ -17,6 +17,7 @@ branches:
 
 before_install:
 - npm install -g jspm
+- jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
 - npm install -g babel
 - npm install -g browserify
 - npm install -g mocha
