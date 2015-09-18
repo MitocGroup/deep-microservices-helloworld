@@ -7,22 +7,26 @@
 import moduleName from '../name';
 
 export class SayHelloController {
-  constructor() {
+  constructor($scope) {
     // @todo: inject this using ng DI
     this._helloResource = DeepFramework.Kernel.get('resource').get('@hello.world.example:sample');
+    this._$scope = $scope;
+
+    this._$scope.catchSubmit = this.catchSubmit.bind(this);
   }
 
   catchSubmit() {
-    var payload = {
-      Name: this.name,
+    let payload = {
+      Name: this._$scope.name,
     };
 
     this._helloResource.request('say-hello', payload).send((response) => {
-      this.data = JSON.stringify(response.data, null, '  ');
+      this._$scope.data = JSON.stringify(response.data, null, '  ');
+      this._$scope.$digest();
     });
   }
 }
 
-SayHelloController.$inject = [];
+SayHelloController.$inject = ['$scope'];
 
 angular.module(moduleName).controller('SayHelloController', SayHelloController);
