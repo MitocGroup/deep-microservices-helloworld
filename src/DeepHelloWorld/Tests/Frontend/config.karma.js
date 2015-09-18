@@ -71,7 +71,8 @@ module.exports = function(config) {
       'karma-jasmine',
       'karma-coverage',
       'karma-jspm',
-      'karma-ng-html2js-preprocessor',
+      'karma-phantomjs-launcher',
+      'karma-verbose-reporter',
     ],
 
     // test results reporter to use
