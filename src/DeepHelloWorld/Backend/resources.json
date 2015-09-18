@@ -1,0 +1,12 @@
+{
+  "sample": {
+    "say-hello": {
+      "description": "Says hello to the world",
+      "type": "lambda",
+      "methods": [
+        "POST"
+      ],
+      "source": "src/SayHello"
+    }
+  }
+}
