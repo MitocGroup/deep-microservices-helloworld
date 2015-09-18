@@ -21,6 +21,6 @@ cat ${__COVERAGE_PATH}"/lcov.info" | coveralls
 
 __CMD='rm -rf ./coverage'
 
-subpath_run_cmd ${__SRC_PATH} "$__CMD" "Frontend"
-subpath_run_cmd ${__SRC_PATH} "$__CMD" "Backend"
+#subpath_run_cmd ${__SRC_PATH} "$__CMD" "Frontend"
+#subpath_run_cmd ${__SRC_PATH} "$__CMD" "Backend"
 subpath_run_cmd ${__COVERAGE_PATH} "$__CMD"
