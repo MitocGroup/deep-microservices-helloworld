@@ -1,0 +1,40 @@
+language: node_js
+sudo: false
+node_js:
+- '0.12'
+
+cache:
+  directories:
+  - $(npm root -g)
+
+branches:
+  only:
+  - master
+  - dev
+  - test
+  - stage
+  - task-4
+
+before_install:
+- npm install -g jspm
+- npm install -g babel
+- npm install -g browserify
+- npm install -g mocha
+- npm install -g mocha-babel
+- npm install -g istanbul
+- npm install -g coveralls
+- npm install -g codacy-coverage
+- npm install -g istanbul-combine
+- npm install -g isparta
+- npm install -g jasmine-core
+- npm install -g karma
+- npm install -g karma-jspm
+- npm install -g karma-jasmine
+- npm install -g karma-babel-preprocessor
+- npm install -g karma-coverage
+- npm install -g karma-verbose-reporter
+- npm install -g phantomjs
+- cp test/package.json .
+
+after_success:
+- npm run coverage
