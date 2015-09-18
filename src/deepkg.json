@@ -3,7 +3,6 @@
   "name": "HelloWorld",
   "description": "Example microservice that does hello world",
   "version": "0.0.1",
-  "propertyRoot": true,
   "author": {
     "name": "Mitoc Group",
     "email": "hello@mitocgroup.com",

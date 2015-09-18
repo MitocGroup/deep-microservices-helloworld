@@ -1,31 +1,20 @@
+/**
+ * Created by AlexanderC on 9/18/15.
+ */
+
 'use strict';
 
-var deepKernel = DeepFramework.Kernel;
+export default function deepHelloWorld() {
+  return System.import('/hello.world.example/js/angular/index');
+};
 
-deepKernel.loadFromFile('_config.json', function() {
-  var deepSecurity = deepKernel.get('security');
+export function configLoad() {
+  let promise = new Promise(() => {});
+  let deepSecurity = DeepFramework.Kernel.get('security');
 
   deepSecurity.anonymousLogin(function(token) {
-    var resource = deepKernel.get('resource');
-
-    var sampleResource = resource.get('@hello.world.example:sample');
-
-    var form = document.getElementById('hello-form');
-
-    form.addEventListener('submit', function(event) {
-      event.returnValue = false;
-
-      var name = form.querySelector('input[name="name"]').value;
-
-      var payload = {
-        Name: name,
-      };
-
-      sampleResource.request('say-hello', payload).send(function(response) {
-        alert('Response: ' + JSON.stringify(response.data));
-      });
-
-      return false;
-    });
+    promise.resolve();
   });
-});
+
+  return promise;
+}
