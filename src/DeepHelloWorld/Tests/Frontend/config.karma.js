@@ -15,16 +15,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'Tests/Frontend/vendor/github/angular/bower-angular@1.4.0/angular.js',
-      'Tests/Frontend/vendor/github/angular/bower-angular-mocks@1.4.4/angular-mocks.js',
-      'Tests/Frontend/vendor/github/angular-ui/ui-router@0.2.15/angular-ui-router.js',
       'Tests/Frontend/vendor/system.js',
 
       'Tests/Frontend/lib/DeepFramework.js',
       'Tests/Frontend/mock/lib/DeepFramework.js',
-
-      //include the directory where directive templates are stored.
-      '**/views/directives/*.html',
     ],
 
     // jspm configuration
@@ -37,8 +31,8 @@ module.exports = function(config) {
         'npm:*': 'Tests/Frontend/vendor/npm/*.js',
       },
       loadFiles: [
-        'Tests/Frontend/angular/**/*.spec.js',
-        'Frontend/js/app/index.js',
+        'Tests/Frontend/**/*.spec.js',
+        'Frontend/js/bootsrap.js',
       ],
       serveFiles: [
         'Frontend/**/*.js',
@@ -57,9 +51,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'Frontend/js/app/**/*.js': ['babel', 'coverage'],
-      'Tests/Frontend/angular/**/*.spec.js': ['babel'],
-      '**/views/directives/*.html': 'ng-html2js',
+      'Frontend/js/**/*.js': ['babel', 'coverage'],
+      'Tests/Frontend/**/*.spec.js': ['babel'],
     },
 
     babelPreprocessor: {
@@ -78,10 +71,6 @@ module.exports = function(config) {
       'karma-jasmine',
       'karma-coverage',
       'karma-jspm',
-      'karma-phantomjs-launcher',
-      'karma-chrome-launcher',
-      'karma-safari-launcher',
-      'karma-verbose-reporter',
       'karma-ng-html2js-preprocessor',
     ],
 

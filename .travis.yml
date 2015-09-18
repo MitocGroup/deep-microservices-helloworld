@@ -34,10 +34,6 @@ before_install:
 - npm install -g karma-coverage
 - npm install -g karma-verbose-reporter
 - npm install -g phantomjs
-- npm install -g karma-phantomjs-launcher
-- npm install -g karma-chrome-launcher
-- npm install -g karma-safari-launcher
-- npm install -g karma-ng-html2js-preprocessor
 - cp test/package.json .
 
 after_success:
