@@ -9,10 +9,11 @@ export default function deepHelloWorld() {
 };
 
 export function configLoad() {
-  let promise = new Promise(() => {});
-  let deepSecurity = DeepFramework.Kernel.get('security');
+  return new Promise((resolve, reject) => {
+    let deepSecurity = DeepFramework.Kernel.get('security');
 
-  deepSecurity.anonymousLogin((token) => promise.resolve(token));
-
-  return promise;
+    deepSecurity.anonymousLogin((token) => {
+      resolve(token);
+    });
+  });
 }
