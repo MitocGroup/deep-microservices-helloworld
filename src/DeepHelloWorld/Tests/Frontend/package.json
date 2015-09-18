@@ -1,0 +1,28 @@
+{
+  "name": "DeepHelloWorldFrontend",
+  "version": "0.0.0",
+  "description": "DEEP Micro Services Hello World Backend",
+  "scripts": {
+    "postinstall": "jspm install",
+    "test": "echo \"No test specified\" && exit 0",
+    "coverage": "echo \"No coverage specified\" && exit 0"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "..",
+      "lib": "",
+      "packages": "vendor",
+      "ss": ""
+    },
+    "configFile": "config.test.js",
+    "dependencies": {},
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.22",
+      "babel-runtime": "npm:babel-runtime@^5.8.20",
+      "core-js": "npm:core-js@^1.1.0"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "private": true
+}
