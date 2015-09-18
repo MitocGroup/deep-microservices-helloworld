@@ -4,7 +4,7 @@
   "description": "DEEP Micro Services Hello World Backend",
   "scripts": {
     "postinstall": "jspm install",
-    "test": "echo \"No test specified\" && exit 0",
+    "test": "karma start config.karma.js",
     "coverage": "echo \"No coverage specified\" && exit 0"
   },
   "jspm": {
