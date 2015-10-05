@@ -18,8 +18,8 @@ echo "Done combining"
 cd ${__COVERAGE_PATH}
 ls -l
 ## Upload Coverage info to Codacy ###
-cat ${__COVERAGE_PATH}"lcov.info" | codacy-coverage
-cat ${__COVERAGE_PATH}"lcov.info" | coveralls
+cat ${__COVERAGE_PATH}"/lcov.info" | codacy-coverage
+cat ${__COVERAGE_PATH}"/lcov.info" | coveralls
 
 echo "Starting cleaup"
 ### Cleanup! ###
