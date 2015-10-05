@@ -23,7 +23,13 @@ ls -l
 
 echo "Starting cleaup"
 ### Cleanup! ###
-#__CMD='rm -rf ./coverage'
-#
-#subpath_run_cmd ${__SRC_PATH} "$__CMD"
-#subpath_run_cmd ${__COVERAGE_PATH} "$__CMD"
+__CMD='rm -rf ./coverage'
+
+subpath_run_cmd ${__SRC_PATH} "$__CMD"
+cd ${__COVERAGE_PATH}
+rm -rf ./coverage
+
+
+echo "Done cleaup"
+cd ${__COVERAGE_PATH}
+
