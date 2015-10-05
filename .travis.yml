@@ -2,11 +2,9 @@ language: node_js
 sudo: false
 node_js:
 - '0.12'
-
 cache:
   directories:
   - $(npm root -g)
-
 branches:
   only:
   - master
@@ -14,8 +12,17 @@ branches:
   - test
   - stage
   - task-4
-
-before_install:
+env:
+  global:
+  #JSPM_GITHUB_AUTH_TOKEN=[secured]
+  - secure: FB5uFEXdJcWiu8lrE+XXpkV8BqXsJV3j0M7bdpMd5khT0u4UKJnF0G4jYBbfgkROJ+ibdbcUZ9wcymnK64zMNxwo8d286GY9XEE91l51iUdLkExC440aotAOrBcxFTOBvklffAaHAIhTf2Us3YnjCWX4gyh4ChwdvjE5AGoDtq6F7k5mY+vZ9fPL5maCqH1XPy1dNl4cTzRtj2fVkvQE7MvckMeMGe/IixRrNB5TmSDLGWPgjdwDaAMfaA0ZB2ky/RGsaCVLyVMtaVpJxIEVnLi7jabx40IuSqZDXFlmpxLNGTAUkKMg2P3AFOvLfh0M7wAGe5FIDh7Xsx2gI/1qe5pFBCUbwmpRUEsd4KBRAP7zCW5r5OOmScKTgxQ/+JU8yIFjWEwTw/c0K0a/kj8b6KKYCj0xfzXc4xd8z0uMGRFbZvc1/d+7DBxYcA7CPJ1iPUJGdmDfi+VehDfgPUEF72R/8ErRZyMNDuc2kCr8wQJXNL7NM8h+xQhU+zeYdOgF8nyk6yL3qs/uYyXqr/DyIZm/syh7ruOocB7VIY4oKSkGORPRCoh7N8+TYCmmcpkEGNNYpdujVuPpW8IpngXjSz7wfsJhBllGN7jW8k56itAEYiM8XlS7TgFQJ9OVrQhHqo9HA8AxgI12xKpJDityefqRMWJZiWQu/r1fV1Juv/U=
+  #COVERALLS_SERVICE_NAME=[secured]
+  - secure: YRv9z4T1OgXixuDCFMW5xH/Q8ytTvUQ9jCLmfb76aWh07uT7uVrbS/YySjnWOzxE79FkKeg9bW0ySnVdZ2vtJloQrDbvsy/qnj28ML2IgKebJW7HlpRcPkUhi8JehbVCWH4kU/I3yg1Ox1plwgFumvWmzjq2fZZfa5+D6uiyeWUBQj4wGaX6HoiVESpyH00sriweSOtDTuyspxMlzGvBBST53PBs4b2p9XKvVMlIFEwAkOSwZaE4/dSQyQeRYoZzrSvWQxAbT42/JEkVWTTHjSGGWM6VIj8/QtSNOrqGcmHjH8mDujQSIXY8CHGShxHy4PBYvMtehtmY66rEpNDKsClHL4Xg7FkqtjuPsm6QdBNfLcXpcnLqGatfPhrd9Aws1xyyvyxqoAUV5WmLHyoa2gEkDlaLIFoGNfNp/UvGNPDvkwSkkbSe0IMB4S3l/GXwbWeCjE5XWu3BEiv2tSHr7p4so9u8aiiCgp93DB4M+7YWoIFQiUSEd2al2CxsEpqdMW7hysJG1cTfPKC1X0Ua5028zcKm56Vssf2IqQwQ5c5D9PdESdJ8K926GR9xojxQFoAZcELQSvvJ5UtFcFYfZoqaAcj//Ug/bxzPZ9MxvOoAIt/clk6Qw2Sk+KZS7thHkDLIMEQcFZ7/gbtbIds5/tIUF5NE68ZSNAD9hGzeq7I=
+  #COVERALLS_REPO_TOKEN=[secured]
+  - secure: Y/SPndTZQKiQmpFkLuhAjAszKMAPYmcPIYfI0ZBXjnvlUUM7gZAzNSlvQQZqEvcejDuIde400SLFFTYDmUWx0U3Y8cu+8DAPleFv3c5YucP1TrjnQfZYcUi93fIMAbVj2Cx1jzTaJQn4UAK0g691a8dHzK6h18vsw/7qu5skgHYnCMkmnFjokm0RFWcY/rFhW9CrLjCqMNMEKFVRz00jxuOGQOj97jSrZS1bA6yoLiu4+RNbA73WJKhGqvn0SOlxO8UjEPUpBVS9JkNo9DpH8fIRsau+Z+X0DxZrbHZsAX+sWZk5rfnqX6weECNMYnYyAGl6kxpzhPiBc5o7rOoR6anurh6GXfmL2UwlV8d1Kwi6IFgHZcMtqpPLXQC6NVyMe/4DrPRZnJKRfgf1IW6Nfo9Jq3A5ALnGwHoK9Rtl9tO3WdhAjaJhYOpzyMsKNm1Wgs/WFepoKZuVhKyiF3dUUqLhRORVK/5XCMSW2GNjjSFdt4PwZwmnqWLZUx0U/8gnhFG01xOdqghlbDK8LeXWofpX/w28gXCLJ9WGbUvJH2VIQCY3ezsAcvFoyA9exOFX3bb2zUeJ3Tt7CfwcMvV9YV23dRNg6BZEB3h7kUDEhGb92kuIIneKDf8C/MFehPNSHBPtxydLS5tKBopWYEqoKEZdK9T48TDRg51OBp1alRo=
+  #CODACY_PROJECT_TOKEN=[secured]
+  - secure: hoMjHUTXC6pTQwajANq4IEQ3rCowdyOPCHFdrQdy5sQxL/oap9FkwgFjp0ZINO/NUo3EiDUcC7Dc/tzRylIrP0/+dC6J3FQKGhXrXuVCx/umOCUm0bTAnof+RXXHZ8KVpk9sNjEZErA1eRLON4XokAZdQBpCB+5ah87cPkMnOdyhtHYg0SZrGYeHh+xYf3gUUTROnpAiysdPvySNVz/iHBPXqyKmJdCikCGb92zZJulUgIa4EEXsEv1aab9PN7xFPPk9zsxDWwBo16mb0Xriqpde5UIAGXVl91QLqQzkgO0YGhHCWw6/EYvZhP2PWhtpBfiyfAaX/gFt54+Wa7blGxVVG3YOvT/LY1XaQ7Bfdg9OOSbZvCKgI2DF4ytD8KgrQXsTuFG5Fg/8eqYAY/NAtgJ+jKhDZ9CYvPO8VSwCOAAkG6N0mx5yub0JfwBcvx65eKRXZBr+ARCUQaa2gIVj7OAqy2VHRfI2aO/LPlKmhoPgugOynDglFCo64JJt/7ZujA5sazvL6SgOrWFaYEW56U+Bch1ULo5llbX+TV/AaA5tpp+JJGRxaasPIUFebYUaSWd3rJ9TisQk9/kAlcWdoQ1yihl/ya5QYwfkvHcWiu2wPOLDu22aXCQYw5SAnl6Yq6DzST2PJYpJtpDewROKT0rrEqIvMVjvivd/nvM8a2E=
+ before_install:
 - npm install -g jspm
 - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
 - npm install -g babel
@@ -31,11 +38,10 @@ before_install:
 - npm install -g karma-jspm
 - npm install -g karma-jasmine
 - npm install -g karma-babel-preprocessor
-- npm install -g --save-dev isparta
-- npm install -g --save-dev douglasduteil/karma-coverage#next
 - npm install -g karma-verbose-reporter
 - npm install -g phantomjs
+- npm install -g --save-dev isparta
+- npm install -g --save-dev douglasduteil/karma-coverage#next
 - cp test/package.json .
-
 after_success:
 - npm run coverage
