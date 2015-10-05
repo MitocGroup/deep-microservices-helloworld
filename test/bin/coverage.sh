@@ -10,17 +10,20 @@ subpath_run_cmd ${__SRC_PATH} "$__CMD"
 echo "Starting combining"
 
 istanbul-combine -d ${__COVERAGE_PATH} -r lcovonly -p both \
-  ${__SRC_PATH}/*/Tests/Frontend/coverage/*/coverage-final.json
-  ${__SRC_PATH}/*/Tests/Backend/coverage/*/coverage-final.json
+  ${__SRC_PATH}*/Tests/Frontend/coverage/*/coverage-final.json
+  ${__SRC_PATH}*/Tests/Backend/coverage/*/coverage-final.json
 
 echo "Done combining"
+
+cd ${__COVERAGE_PATH}
+ls -l
 ## Upload Coverage info to Codacy ###
-cat ${__COVERAGE_PATH}"/lcov.info" | codacy-coverage
-cat ${__COVERAGE_PATH}"/lcov.info" | coveralls
-
-echo "Starting cleaup"
-### Cleanup! ###
-__CMD='rm -rf ./coverage'
-
-subpath_run_cmd ${__SRC_PATH} "$__CMD"
-subpath_run_cmd ${__COVERAGE_PATH} "$__CMD"
+#cat ${__COVERAGE_PATH}"/lcov.info" | codacy-coverage
+#cat ${__COVERAGE_PATH}"/lcov.info" | coveralls
+#
+#echo "Starting cleaup"
+#### Cleanup! ###
+#__CMD='rm -rf ./coverage'
+#
+#subpath_run_cmd ${__SRC_PATH} "$__CMD"
+#subpath_run_cmd ${__COVERAGE_PATH} "$__CMD"
