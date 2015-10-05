@@ -10,8 +10,8 @@ subpath_run_cmd ${__SRC_PATH} "$__CMD"
 echo "Starting combining"
 
 istanbul-combine -d ${__COVERAGE_PATH} -r lcovonly -p both \
-  ${__SRC_PATH}*/Tests/Frontend/coverage/*/coverage-final.json
-  ${__SRC_PATH}*/Tests/Backend/coverage/*/coverage-final.json
+  ${__SRC_PATH}*/Tests/Frontend/coverage/*/*.json
+  ${__SRC_PATH}*/Tests/Backend/coverage/*.json
 
 echo "Done combining"
 
@@ -25,5 +25,5 @@ echo "Starting cleaup"
 ### Cleanup! ###
 __CMD='rm -rf ./coverage'
 
-subpath_run_cmd ${__SRC_PATH} "$__CMD"
-subpath_run_cmd ${__COVERAGE_PATH} "$__CMD"
+#subpath_run_cmd ${__SRC_PATH} "$__CMD"
+#subpath_run_cmd ${__COVERAGE_PATH} "$__CMD"
