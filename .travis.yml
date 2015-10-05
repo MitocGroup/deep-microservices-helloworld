@@ -40,7 +40,7 @@ before_install:
 - npm install -g karma-babel-preprocessor
 - npm install -g karma-verbose-reporter
 - npm install -g phantomjs
-- npm install -g --save-dev isparta
+- npm install -g isparta
 - npm install -g --save-dev douglasduteil/karma-coverage#next
 - cp test/package.json .
 after_success:
