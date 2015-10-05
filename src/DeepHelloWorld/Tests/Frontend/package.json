@@ -28,6 +28,10 @@
     }
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "isparta": "^3.1.0",
+    "jspm": "^0.16.2",
+    "karma-coverage": "douglasduteil/karma-coverage#next"
+  },
   "private": true
 }
