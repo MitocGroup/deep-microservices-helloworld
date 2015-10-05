@@ -26,13 +26,13 @@ before_install:
 - npm install -g coveralls
 - npm install -g codacy-coverage
 - npm install -g istanbul-combine
-- npm install -g isparta
 - npm install -g jasmine-core
 - npm install -g karma
 - npm install -g karma-jspm
 - npm install -g karma-jasmine
 - npm install -g karma-babel-preprocessor
-- npm install -g karma-coverage
+- npm install -g --save-dev isparta
+- npm install -g --save-dev douglasduteil/karma-coverage#next
 - npm install -g karma-verbose-reporter
 - npm install -g phantomjs
 - cp test/package.json .

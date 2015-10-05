@@ -3,25 +3,39 @@
 __SCRIPT_PATH=$(cd $(dirname $0); pwd -P)
 
 __ROOT_PATH="${__SCRIPT_PATH}/../../"
-__SRC_PATH="${__ROOT_PATH}src/DeepHelloWorld/Tests/"
+__SRC_PATH="${__ROOT_PATH}src/"
 __COVERAGE_PATH=${__SCRIPT_PATH}"/../coverage"
 
 subpath_run_cmd () {
     local DIR
     local CMD
-    local EXPR
+    local EXPR_BACKEND
+    local EXPR_FRONTEND
 
     DIR=$(cd $1 && pwd -P)
     CMD=$2
 
     if [ -z $3 ]; then
-        EXPR="*"
+        EXPR_FRONTEND="Deep*/Tests/Frontend/"
+        EXPR_BACKEND="Deep*/Tests/Backend/"
     else
-        EXPR=$3
+        EXPR_FRONTEND=$3"/Frontend"
+        EXPR_BACKEND=$3"/Backend"
     fi
 
-    for subpath in $DIR/$EXPR
+    #run tests for frontend
+    for subpath in $DIR/$EXPR_FRONTEND
     do
+        echo "[Running command for Frontend] $subpath"
+        if [ -d ${subpath} ]; then
+            cd ${subpath} && eval_or_exit "$CMD"
+        fi
+    done
+
+    #run tests for backend
+    for subpath in $DIR/$EXPR_BACKEND
+    do
+        echo "[Running command for Backend] $subpath"
         if [ -d ${subpath} ]; then
             cd ${subpath} && eval_or_exit "$CMD"
         fi

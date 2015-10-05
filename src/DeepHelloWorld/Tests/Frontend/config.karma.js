@@ -16,7 +16,6 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'Tests/Frontend/vendor/system.js',
-
       'Tests/Frontend/lib/DeepFramework.js',
       'Tests/Frontend/mock/lib/DeepFramework.js',
     ],
@@ -31,7 +30,7 @@ module.exports = function(config) {
         'npm:*': 'Tests/Frontend/vendor/npm/*.js',
       },
       loadFiles: [
-        'Tests/Frontend/**/*.spec.js',
+        'Tests/Frontend/tests/**/*.spec.js',
         'Frontend/js/bootstrap.js',
       ],
       serveFiles: [
@@ -39,21 +38,22 @@ module.exports = function(config) {
       ],
     },
 
-    proxies: {},
+    proxies: {
+    },
 
     client: {
       captureConsole: true,
     },
 
     // list of files to exclude
-    exclude: [],
+    exclude: [
+    ],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       'Frontend/js/**/*.js': ['coverage'],
-      'Frontend/js/bootstrap.js': ['babel'],
-      'Tests/Frontend/**/*.spec.js': ['babel'],
+      'Tests/Frontend/tests/**/*.spec.js': ['babel'],
     },
 
     babelPreprocessor: {
@@ -61,10 +61,6 @@ module.exports = function(config) {
         sourceMap: 'inline',
         modules: 'system',
       },
-    },
-
-    ngHtml2JsPreprocessor: {
-      moduleName: 'templates',
     },
 
     plugins: [
@@ -84,6 +80,12 @@ module.exports = function(config) {
     reporters: ['verbose', 'coverage'],
 
     coverageReporter: {
+      // configure the reporter to use isparta for JavaScript coverage
+      // Only on { "karma-coverage": "douglasduteil/karma-coverage#next" }
+      instrumenters: { isparta: require('isparta') },
+      instrumenter: {
+        '**/*.js': 'isparta',
+      },
       reporters: [
         {
           type: 'json',
@@ -117,6 +119,5 @@ module.exports = function(config) {
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: true,
 
-  })
-  ;
+  });
 };

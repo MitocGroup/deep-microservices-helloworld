@@ -2,7 +2,7 @@
   "preset": "airbnb",
   "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
   "excludeFiles": [
-    "./src/DeepHelloWorld/Frontend/framework.js"
+    "./src/DeepHelloWorld/Frontend/lib/framework.js"
   ],
   "requirePaddingNewLinesAfterBlocks": {
     "allExcept": [

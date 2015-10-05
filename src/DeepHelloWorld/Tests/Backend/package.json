@@ -4,7 +4,7 @@
   "description": "DEEP Micro Services Hello World Backend",
   "scripts": {
     "install": "npm install",
-    "test": "echo \"No test specified for backend\" && exit 0",
+    "test": "echo \"No test specified\" && exit 0",
     "coverage": "echo \"No coverage specified\" && exit 0"
   },
   "dependencies": {},
