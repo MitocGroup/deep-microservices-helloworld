@@ -3,7 +3,7 @@
 
 import moduleName from './name';
 
-import './module/index';
-import './controllers/index';
+//import './module/index';
+//import './controllers/index';
 
 export default moduleName;
