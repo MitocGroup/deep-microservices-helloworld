@@ -17,19 +17,18 @@ echo "Done combining"
 
 cd ${__COVERAGE_PATH}
 ls -l
-## Upload Coverage info to Codacy ###
-#cat ${__COVERAGE_PATH}"/lcov.info" | codacy-coverage
-#cat ${__COVERAGE_PATH}"/lcov.info" | coveralls
+### Upload Coverage info to Codacy ###
+cat ${__COVERAGE_PATH}"/lcov.info" | codacy-coverage
+cat ${__COVERAGE_PATH}"/lcov.info" | coveralls
 
 echo "Starting cleaup"
 ### Cleanup! ###
-__CMD='rm -rf ./coverage'
 
+#remove all generated reports
+__CMD='rm -rf ./coverage'
 subpath_run_cmd ${__SRC_PATH} "$__CMD"
+
+#remove final report
 cd ${__COVERAGE_PATH}
 rm -rf ./coverage
-
-
-echo "Done cleaup"
-cd ${__COVERAGE_PATH}
 
