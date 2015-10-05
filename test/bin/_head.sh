@@ -16,8 +16,8 @@ subpath_run_cmd () {
     CMD=$2
 
     if [ -z $3 ]; then
-        EXPR_FRONTEND="Deep*/Tests/Frontend/"
-        EXPR_BACKEND="Deep*/Tests/Backend/"
+        EXPR_FRONTEND="*/Tests/Frontend/"
+        EXPR_BACKEND="*/Tests/Backend/"
     else
         EXPR_FRONTEND=$3"/Frontend"
         EXPR_BACKEND=$3"/Backend"

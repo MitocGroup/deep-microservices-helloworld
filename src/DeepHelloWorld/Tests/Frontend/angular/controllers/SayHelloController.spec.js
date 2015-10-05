@@ -17,8 +17,8 @@ describe('Controllers', function() {
 
   describe('SayHelloController', function() {
     it('Controller is not implemented', function() {
-      let controller = $controller('SayHelloController', {});
-      expect(Object.keys(controller).length).toBe(0);
+      let controller = $controller('SayHelloController', {$scope: {catchSubmit: null}});
+      expect(Object.keys(controller).length).toBe(2);
     });
   });
 

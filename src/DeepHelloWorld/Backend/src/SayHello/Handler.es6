@@ -1,7 +1,3 @@
-/**
- * Created by Stefan Hariton on 7/8/15.
- */
-
 'use strict';
 
 import DeepFramework from 'deep-framework';
@@ -15,51 +11,67 @@ export default class extends DeepFramework.Core.AWS.Lambda.Runtime {
   }
 
   /**
-   *
    * @param request
    */
   handle(request) {
-    let fs = this.kernel.get('fs');
-    let db = this.kernel.get('db');
+    let payload = {
+      Name: request.getParam('Name', 'World'),
+    };
 
-    let dateString = new Date().toISOString();
-
-    let requestFile = `hello_request_${dateString}`;
-
-    // The local server uses this folder to mimic s3fs
-    if (fs.system._rootFolder) {
-      console.log(`Using FS local root folder: ${fs.system._rootFolder}`);
-    }
-
-    console.log(`Persisting request to file ${requestFile}`);
-
-    fs.system.writeFile(requestFile, JSON.stringify(request.data), function(error) {
+    this.persistPayloadInFs(payload, (error, createdFile) => {
       if (error) {
-        this.createError(error).send();
-        return;
+        return this.createError(error).send();
       }
 
-      let NameModel = db.get('Name');
-
-      let passedName = request.getParam('Name', 'World');
-
-      let data = {
-        Name: passedName
-      };
-
-      console.log(`Persisting data into 'Name' model: `, data);
-
-      NameModel.createItem(data, function(error, NameModel) {
+      this.persistPayloadInDb(payload, (error, NameModel) => {
         if (error) {
-          this.createError(error).send();
-          return;
+          return this.createError(error).send();
         }
 
         this.createResponse({
-          model: NameModel.get(),
-          msg: `Hello ${passedName}!`,
+          msg: `Hello ${payload.Name}!`,
+          db: NameModel.get(),
+          fs: createdFile,
         }).send();
-      }.bind(this));
-    }.bind(this));
+      });
+    });
+  }
+
+  /**
+   * Saves request payload into system fs (it can be also saved into public and temp fs)
+   *
+   * @param {Object} payload
+   * @param {Function} callback
+   */
+  persistPayloadInFs(payload, callback) {
+    let fs = this.kernel.get('fs');
+
+    let fileName = `request_payload_${(new Date()).toISOString()}`;
+
+    fs.system.writeFile(fileName, JSON.stringify(payload), function(error) {
+      if (error) {
+        callback(error, null);
+      } else {
+        callback(null, fileName);
+      }
+    });
+  }
+
+  /**
+   * Saves request payload into DB
+   *
+   * @param {Object} payload
+   * @param {Function} callback
+   */
+  persistPayloadInDb(payload, callback) {
+    let db = this.kernel.get('db');
+
+    db.get('Name').createItem(payload, function(error, NameModel) {
+      if (error) {
+        callback(error, null);
+      } else {
+        callback(null, NameModel);
+      }
+    });
   }
 }

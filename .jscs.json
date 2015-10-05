@@ -2,7 +2,8 @@
   "preset": "airbnb",
   "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
   "excludeFiles": [
-    "./src/Deep*/Frontend/**/framework.js"
+    "./src/Deep*/Frontend/**/framework.js",
+    "./src/Deep*/Tests/**/DeepFramework.js"
   ],
   "requirePaddingNewLinesAfterBlocks": {
     "allExcept": [

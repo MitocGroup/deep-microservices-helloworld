@@ -10,5 +10,5 @@
   "devDependencies": {
     "say-hello-test": "file:../../Backend/src/SayHello"
   },
-  "private": true
+  "private": false
 }
