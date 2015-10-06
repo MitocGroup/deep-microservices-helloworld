@@ -63,7 +63,7 @@ DeepHelloWorld/         --> root folder of the DeepHelloWorld microservice
     fonts/              --> this folder includes all fonts
     ...
   Backend/              --> this folder includes everything back-end related
-    .deepignore         --> this file is used only when front-end is supposed to be ignored
+    .deepignore         --> this file is used only when back-end is supposed to be ignored
     resources.json      --> this file contains the metadata of back-end resoures like Lambda, API Gateway, and so on
     src/                --> this folder includes all files used by back-end
       SayHello/         --> this folder includes the SayHello code loaded into Lambda
@@ -123,7 +123,7 @@ to reduce the amount of time spent poring over code style.
 
 ### ESDoc
 
-[ESDoc](https://esdoc.org) is a documentation generator for JavaScript(ES6). It produces a practical document, 
+[ESDoc](https://esdoc.org) is a documentation generator for JavaScript(ES6). It produces a practical documentation, 
 measures the coverage, integrates the test code and more.
 
 
