@@ -1,9 +1,9 @@
-/**
- * Created by AlexanderC on 9/18/15.
- */
-
 'use strict';
+'format es6';
+
+import moduleName from './name';
 
 import './module/index';
 import './controllers/index';
-import moduleName from './name';
+
+export default moduleName;

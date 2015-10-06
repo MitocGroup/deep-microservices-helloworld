@@ -1,7 +1,4 @@
-/**
- * Created by AlexanderC on 9/18/15.
- */
-
 'use strict';
+'format es6';
 
-import './SayHello';
+import './SayHelloController';

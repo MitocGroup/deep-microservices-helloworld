@@ -1,9 +1,6 @@
-/**
- * Created by AlexanderC on 9/18/15.
- */
-
 'use strict';
+'format es6';
 
-import moduleName from '../name';
-
-angular.module(moduleName, ['ui.router']);
+export default [
+  'ui.router',
+];

@@ -1,7 +1,7 @@
 {
-  "name": "DeepNgRoot",
+  "name": "deep-hello-world",
   "version": "0.0.1",
-  "description": "Base Angular microservice",
+  "description": "HelloWorld sample microservice",
   "scripts": {
     "install": "if [ -f '.travis.yml' ]; then test/bin/install.sh; else bin/install.sh; fi",
     "test": "if [ -f '.travis.yml' ]; then test/bin/test.sh; else bin/test.sh; fi",
@@ -11,6 +11,5 @@
     "build:modules:sfx": "jspm bundle-sfx app/angular/index lib/modules_bundle.sfx.min.js --minify"
   },
   "dependencies": {},
-  "devDependencies": {},
-  "private": true
+  "devDependencies": {}
 }

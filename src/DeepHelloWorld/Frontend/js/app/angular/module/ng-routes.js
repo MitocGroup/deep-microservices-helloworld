@@ -1,14 +1,9 @@
-/**
- * Created by AlexanderC on 9/18/15.
- */
-
 'use strict';
+'format es6';
 
-import moduleName from '../name';
+var deepAsset = DeepFramework.Kernel.container.get('asset');
 
-let deepAsset = DeepFramework.Kernel.container.get('asset');
-
-let routes = {
+export default {
   'say-hello': {
     url: '/say-hello',
     controller: 'SayHelloController',
@@ -19,22 +14,3 @@ let routes = {
     },
   },
 };
-
-class Config {
-  constructor($stateProvider, $urlRouterProvider) {
-    /* Define application level routes */
-    let stateNames = Object.keys(routes);
-
-    angular.forEach(stateNames, function routesRegister(stateName) {
-      $stateProvider.state(stateName, routes[stateName]);
-    });
-
-    $urlRouterProvider.otherwise(routes['say-hello'].url);
-  }
-}
-
-Config.$inject = ['$stateProvider', '$urlRouterProvider'];
-
-angular.module(moduleName).config(Config);
-
-export default routes;
