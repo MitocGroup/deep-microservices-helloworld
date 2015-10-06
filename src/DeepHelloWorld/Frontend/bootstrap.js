@@ -1,7 +1,7 @@
 'use strict';
 'format es6';
 
-export default function billing() {
+export default function deepHelloWorld() {
   return System.import('/hello.world.example/js/app/angular/index.js');
 }
 
