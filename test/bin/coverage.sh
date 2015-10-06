@@ -16,16 +16,16 @@ NEW_PATH="Frontend"
 sed "s/$OLD_PATH/$NEW_PATH/g" ${__COVERAGE_PATH}"/lcov.info" > ${__COVERAGE_PATH}"/prepared_report.info"
 
 ### Upload Coverage info to Codacy ###
-#cat ${__COVERAGE_PATH}"/prepared_report.info" | codacy-coverage
-#cat ${__COVERAGE_PATH}"/prepared_report.info" | coveralls
-#
-#
-#### Cleanup! ###
-##remove all generated reports
-#__CMD='rm -rf ./coverage'
-#subpath_run_cmd ${__SRC_PATH} "$__CMD"
-#
-##remove final report
-#cd ${__COVERAGE_PATH}
-#rm -rf ${__COVERAGE_PATH}
+cat ${__COVERAGE_PATH}"/prepared_report.info" | codacy-coverage
+cat ${__COVERAGE_PATH}"/prepared_report.info" | coveralls
+
+
+### Cleanup! ###
+#remove all generated reports
+__CMD='rm -rf ./coverage'
+subpath_run_cmd ${__SRC_PATH} "$__CMD"
+
+#remove final report
+cd ${__COVERAGE_PATH}
+rm -rf ${__COVERAGE_PATH}
 

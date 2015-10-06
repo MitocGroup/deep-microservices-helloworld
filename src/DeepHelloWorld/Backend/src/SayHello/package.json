@@ -27,11 +27,10 @@
   },
   "dependencies": {
     "deep-framework": "*",
-    "babel-core": "5.5.*"
+    "babel-core": "5.8.*"
   },
   "devDependencies": {
   },
   "preferGlobal": false,
-  "private": true,
   "analyze": true
 }
