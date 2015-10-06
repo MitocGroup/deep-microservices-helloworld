@@ -7,6 +7,8 @@
 
 ## Getting Started
 
+[Digital Enterprise End-to-end Platform](https://github.com/MitocGroup/deep-framework) (also known as DEEP) is low cost and low maintenance Platform-as-a-Service powered by abstracted services (also known as serverless environments) from AWS.
+
 DEEP Microservice HelloWorld can be used in 4 simple steps:
 
 - Step 1: Install `deepify` (also known as DEEP CLI)
