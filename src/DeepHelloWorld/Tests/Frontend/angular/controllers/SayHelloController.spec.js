@@ -18,17 +18,9 @@ describe('Controllers', function() {
   describe('SayHelloController', function() {
 
     it('Controller is implemented', function() {
-      let controller = $controller('SayHelloController', {$scope: {catchSubmit: null}});
+      let controller = $controller('SayHelloController', {$scope: {catchSubmit: null, name: 'test'}});
 
       expect(Object.keys(controller).length).toBe(2);
     });
-
-    it('Call catchSubmit() method with empty payload', function() {
-      let controller = $controller('SayHelloController', {$scope: {catchSubmit: null}});
-
-      expect(controller.catchSubmit()).toBe(undefined);
-    });
   });
-
-})
-;
+});
