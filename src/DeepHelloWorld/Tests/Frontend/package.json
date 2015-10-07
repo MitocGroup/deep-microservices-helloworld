@@ -1,7 +1,7 @@
 {
-  "name": "DeepMgBilling",
+  "name": "deep-hello-world-frontend",
   "version": "0.0.0",
-  "description": "DEEP Micro Services Billing",
+  "description": "DEEP HelloWorld Microservice",
   "scripts": {
     "postinstall": "jspm install",
     "test": "karma start config.karma.js",
