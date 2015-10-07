@@ -63,7 +63,7 @@ DeepHelloWorld/         --> root folder of the DeepHelloWorld microservice
     fonts/              --> this folder includes all fonts
     ...
   Backend/              --> this folder includes everything back-end related
-    .deepignore         --> this file is used only when front-end is supposed to be ignored
+    .deepignore         --> this file is used only when back-end is supposed to be ignored
     resources.json      --> this file contains the metadata of back-end resoures like Lambda, API Gateway, and so on
     src/                --> this folder includes all files used by back-end
       SayHello/         --> this folder includes the SayHello code loaded into Lambda
@@ -127,9 +127,9 @@ Coming soon
 
 ### Travis CI
 
-[Travis CI](https://travis-ci.org/MitocGroup) is a continuous integration service used to build and test 
+[Travis CI](https://travis-ci.org/MitocGroup/deep-microservices-helloworld) is a continuous integration service used to build and test 
 projects hosted on GitHub. Travis CI is configured by adding a file named 
-[.travis.yml](https://github.com/MitocGroup/deep-microservices-helloworld/master/blob/.travis.yaml), 
+[.travis.yml](https://github.com/MitocGroup/deep-microservices-helloworld/blob/master/.travis.yml), 
 which is a YAML format text file, to the root directory of the GitHub repository.
 
 ### Coveralls
@@ -146,7 +146,7 @@ to reduce the amount of time spent poring over code style.
 
 ### ESDoc
 
-[ESDoc](https://esdoc.org) is a documentation generator for JavaScript(ES6). It produces a practical document, 
+[ESDoc](https://esdoc.org) is a documentation generator for JavaScript(ES6). It produces a practical documentation, 
 measures the coverage, integrates the test code and more.
 
 
@@ -161,7 +161,7 @@ DEEP is using [microservices architecture](https://en.wikipedia.org/wiki/Microse
 ### License
 
 This repository can be used under the MIT license.
-> See [LICENSE](LICENSE) for more details.
+> See [LICENSE](https://github.com/MitocGroup/deep-microservices-helloworld/blob/master/LICENSE) for more details.
 
 ### Sponsors
 
