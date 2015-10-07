@@ -10,6 +10,5 @@
   "devDependencies": {
     "chai": "3.2.*",
     "say-hello-test": "file:../../Backend/src/SayHello"
-  },
-  "private": false
+  }
 }
