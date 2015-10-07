@@ -1,0 +1,14 @@
+{
+  "name": "DeepHelloWorldBackend",
+  "version": "0.0.0",
+  "description": "DEEP Micro Services Hello World Backend",
+  "scripts": {
+    "coverage": "babel-node `which istanbul` cover --report lcov _mocha -- --ui tdd --recursive --reporter spec test/**/*.spec.js",
+    "test": "mocha --ui tdd --compilers js:mocha-babel --recursive --reporter spec test/**/*.spec.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "3.2.*",
+    "say-hello-test": "file:../../Backend/src/SayHello"
+  }
+}

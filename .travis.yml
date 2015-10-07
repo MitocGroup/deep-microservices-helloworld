@@ -1,0 +1,39 @@
+language: node_js
+sudo: false
+node_js:
+- '0.12'
+cache:
+  directories:
+  - $(npm root -g)
+branches:
+  only:
+  - master
+  - dev
+  - test
+  - stage
+env:
+  global:
+  #CODACY_PROJECT_TOKEN=[secured]
+  - secure: hoMjHUTXC6pTQwajANq4IEQ3rCowdyOPCHFdrQdy5sQxL/oap9FkwgFjp0ZINO/NUo3EiDUcC7Dc/tzRylIrP0/+dC6J3FQKGhXrXuVCx/umOCUm0bTAnof+RXXHZ8KVpk9sNjEZErA1eRLON4XokAZdQBpCB+5ah87cPkMnOdyhtHYg0SZrGYeHh+xYf3gUUTROnpAiysdPvySNVz/iHBPXqyKmJdCikCGb92zZJulUgIa4EEXsEv1aab9PN7xFPPk9zsxDWwBo16mb0Xriqpde5UIAGXVl91QLqQzkgO0YGhHCWw6/EYvZhP2PWhtpBfiyfAaX/gFt54+Wa7blGxVVG3YOvT/LY1XaQ7Bfdg9OOSbZvCKgI2DF4ytD8KgrQXsTuFG5Fg/8eqYAY/NAtgJ+jKhDZ9CYvPO8VSwCOAAkG6N0mx5yub0JfwBcvx65eKRXZBr+ARCUQaa2gIVj7OAqy2VHRfI2aO/LPlKmhoPgugOynDglFCo64JJt/7ZujA5sazvL6SgOrWFaYEW56U+Bch1ULo5llbX+TV/AaA5tpp+JJGRxaasPIUFebYUaSWd3rJ9TisQk9/kAlcWdoQ1yihl/ya5QYwfkvHcWiu2wPOLDu22aXCQYw5SAnl6Yq6DzST2PJYpJtpDewROKT0rrEqIvMVjvivd/nvM8a2E=
+  #JSPM_GITHUB_AUTH_TOKEN=[secured]
+  - secure: FB5uFEXdJcWiu8lrE+XXpkV8BqXsJV3j0M7bdpMd5khT0u4UKJnF0G4jYBbfgkROJ+ibdbcUZ9wcymnK64zMNxwo8d286GY9XEE91l51iUdLkExC440aotAOrBcxFTOBvklffAaHAIhTf2Us3YnjCWX4gyh4ChwdvjE5AGoDtq6F7k5mY+vZ9fPL5maCqH1XPy1dNl4cTzRtj2fVkvQE7MvckMeMGe/IixRrNB5TmSDLGWPgjdwDaAMfaA0ZB2ky/RGsaCVLyVMtaVpJxIEVnLi7jabx40IuSqZDXFlmpxLNGTAUkKMg2P3AFOvLfh0M7wAGe5FIDh7Xsx2gI/1qe5pFBCUbwmpRUEsd4KBRAP7zCW5r5OOmScKTgxQ/+JU8yIFjWEwTw/c0K0a/kj8b6KKYCj0xfzXc4xd8z0uMGRFbZvc1/d+7DBxYcA7CPJ1iPUJGdmDfi+VehDfgPUEF72R/8ErRZyMNDuc2kCr8wQJXNL7NM8h+xQhU+zeYdOgF8nyk6yL3qs/uYyXqr/DyIZm/syh7ruOocB7VIY4oKSkGORPRCoh7N8+TYCmmcpkEGNNYpdujVuPpW8IpngXjSz7wfsJhBllGN7jW8k56itAEYiM8XlS7TgFQJ9OVrQhHqo9HA8AxgI12xKpJDityefqRMWJZiWQu/r1fV1Juv/U=
+  #COVERALLS_REPO_TOKEN=[secured]
+  - secure: l+nBPSqF/VvOZj0SKVSsgetfqX8hLuDEscqk7nlvPjDKz+O13u5qNqtmO23//PsD/H6MhA14e3hgI+nnPftGkXR+rMudK+hdR42luhhGV5NeAkuzz+9hvfY+dRyWXPpkiJM2mrsGfHHGl10Cw6MFNI8xTncsDgLfP23JrrWaC77CjmW82ZS2drP5F7bKVUQSPAcZi6jDW4m3WSSEmeqkvAgG4cSjUp4sn0f/6aWxnselBFS4OFLz1yyo2iNbrUghLmq2ul1bQB6p+DHMv219jfJFAiYl+NegD6IDvB/eiY1nErTvffQPRFJPqBrvKBpuAOL785m39PwLWKN9lf6LVFtdWB5qzTDpE2iWSd3PEkGURSHuzXwWzI7KMuyA8VcMeiXYBKCvCBA502vBp1RsBviLCT82k9PTd8xSkrRQPBVhKfH9/PREii7Whnu26enuDKghx9rbKXQPpqzbyZET3lCWOHVmrePWWcUQpJ8zI3QsLLxUZ/W0voZkJrhkyieRj1UoXakDKtd7y+QQEMv1RiPWVYlHqzveU2tGr13x4lUZ0bH5EOm5jr+S6kf7TYNSpCtsx15C1qeoWLH/6G40Cd4iKJ0/bN9J4l2ZxH/o9bI2nQMLs/IdpaBdN5WUrrfiDSe0ycFrJJKtThUBOpW5GYrkRUMl58AZw3pOP3eRyaQ=
+  #COVERALLS_SERVICE_NAME=[secured]
+  - secure: AfIpmOzQ4zRmEhxOywaxy0M3zI6mPSyQuzg8h55L8BIu+LXIr5Rp+34chAbJMDDkEOAdrXM8DYSohZW2wR5QIbmQRNj3SzoYbxFSU7sVsbb+5+ZU2K5Q9JS37ct2uL2DwElCmQt5CbrDsJ61Ofmoms6zSfMC2I9eJINV3yW360SAy/Eo1RBXhnWTttWgIp5Ypd4U0+EnHuBI/YIrXx8CoMuEOTQw/+QY8z6mmIFNSofTldZoF9p12j5fzAIXUbIhv0j+/sNLEPUh4uk+XtLpJSrKis8NeQzp2q9+Bhaw1ZDuk7yabaSEawNoXdu9YAoL3Ec3nXOctqqxlYa+Ju7FvX4EHSpl4zP3IVsrw5JjcJm3wLtuiSKkpH370WkyGUGCQEVLMQT2xG94k5/1DEdUGwAM8mZcBnpCTGkw0Nu09lf00/kReKrNl/faXHW/51TDha6Qw9i26oazyYKBrz1/RwWoUL5NKoEJXp+aogoa43YU/Sa9Tn3hftjZaXkqLFOrbAx2mFLDljGuh+7a8q2fcxgrLnv9hwg+ppXp/OudVASjweSCgXmcAJnZcm8zO6arvE3KDjeegIYYfzy93gcEdFKV7wB8/0BTj7TcoP1+J/s4OvvuvaFMTQDQY91Lxy4NGWNA5O+cM1Upud6MSGEKnN4on4RWy4TT9DGJjcTPF1c=
+before_install:
+- npm install -g jspm
+- jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
+- npm install -g babel
+- npm install -g browserify
+- npm install -g mocha
+- npm install -g mocha-babel
+- npm install -g istanbul
+- npm install -g coveralls
+- npm install -g isparta
+- npm install -g codacy-coverage
+- npm install -g istanbul-combine
+- npm install -g jasmine-core
+- cp test/package.json .
+after_success:
+- npm run coverage
