@@ -16,11 +16,11 @@ describe('Controllers', function() {
   }));
 
   describe('SayHelloController', function() {
-    it('Controller is not implemented', function() {
-      let controller = $controller('SayHelloController', {$scope: {catchSubmit: null}});
+
+    it('Controller is implemented', function() {
+      let controller = $controller('SayHelloController', {$scope: {catchSubmit: null, name: 'test'}});
+
       expect(Object.keys(controller).length).toBe(2);
     });
   });
-
-})
-;
+});
