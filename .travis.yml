@@ -11,7 +11,7 @@ branches:
   - dev
   - test
   - stage
-  - task-4
+
 env:
   global:
   #CODACY_PROJECT_TOKEN=[secured]
