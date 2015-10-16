@@ -1,9 +1,9 @@
-![Digital Enterprise End-to-end Platform Microservices](https://github.com/MitocGroup/deep-microservices-helloworld/blob/master/src/DeepHelloWorld/Frontend/img/logo.png) DEEP Microservices HelloWorld
+![Digital Enterprise End-to-end Platform Microservices](https://github.com/MitocGroup/deep-microservices-helloworld/blob/master/src/DeepHelloWorld/Frontend/img/logo.png) DEEP Microservices HelloWorld 
 ===============================
 
 [![Build Status](https://travis-ci.org/MitocGroup/deep-microservices-helloworld.svg?branch=master)](https://travis-ci.org/MitocGroup/deep-microservices-helloworld)
+[![Codacy Badge](https://api.codacy.com/project/badge/9583758a5b30454580527e4f90abc564)](https://www.codacy.com/app/MitocGroup/deep-microservices-helloworld)
 [![Coverage Status](https://coveralls.io/repos/MitocGroup/deep-microservices-helloworld/badge.svg)](https://coveralls.io/r/MitocGroup/deep-microservices-helloworld)
-[![Codacy Badge](https://api.codacy.com/project/badge/b7e24fb220d644728d84742d478ae709)](https://www.codacy.com/app/MitocGroup/deep-microservices-helloworld)
 
 [Digital Enterprise End-to-end Platform](https://github.com/MitocGroup/deep-framework) (also known as DEEP) is low cost and low maintenance Platform-as-a-Service powered by abstracted services (also known as serverless environments) from AWS.
 
@@ -157,6 +157,23 @@ measures the coverage, integrates the test code and more.
 DEEP is using [microservices architecture](https://en.wikipedia.org/wiki/Microservices) on serverless environments from cloud providers like AWS. [DEEP Microservice](https://github.com/MitocGroup/deep-framework/blob/master/docs/microservice.md) is the predefined structure of a microservice (an application) in DEEP. There is clear separation between frontend, backend and database, as well as unit tests and documentation.
 
 > [DEEP Marketplace](https://www.deep.mg) (aka [www.deep.mg](https://www.deep.mg)) is a web application built using DEEP and published on serverless environment from [Amazon Web Services](https://aws.amazon.com) (aka [aws.amazon.com](https://aws.amazon.com)). We make it faster and easier for developers to build and publish their software, as well as for businesses to discover and test applications they are looking for. Our goal is to connect businesses with developers, and empower technical teams to build self-service software that none technical teams could use. The marketplace is like Apple's App Store for web applications that run natively on cloud providers like AWS.
+
+## Feedback
+
+We are eager to get your feedback, so please use whatever communication channel you prefer:
+- [github issues](https://github.com/MitocGroup/deep-framework/issues)
+- [gitter chat room](https://gitter.im/MitocGroup/deep-framework)
+- [deep email address](mailto:feedback@deep.mg)
+
+## Contribution
+
+This project is open source, and we encourage developers to contribute. Here below is the easiest way to do so:
+
+1. [Fork](http://help.github.com/forking/) this repository in GitHub.
+2. Develop the feature in your repository. Make one or more commits to your repository in GitHub.
+3. Perform a [pull request](http://help.github.com/pull-requests/) from your repository back into original repository in GitHub.
+
+Make sure you update `package.json` (or `deepkg.json`, depends on the use case) and put your name and contact information in contributors section. We would like to recognize the work and empower every contributor in creative ways :)
 
 ### License
 
