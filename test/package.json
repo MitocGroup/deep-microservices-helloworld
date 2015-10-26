@@ -25,7 +25,7 @@
     "istanbul-combine": "0.3.0",
     "isparta": "3.1.0",
     "phantomjs": "1.9.18",
-    "karma": "0.13.10",
+    "karma": "0.13.11",
     "karma-jspm": "2.0.1",
     "karma-jasmine": "0.3.6",
     "karma-babel-preprocessor": "5.2.2",
