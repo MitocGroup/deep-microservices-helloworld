@@ -17,9 +17,18 @@ describe('Controllers', function() {
   }));
 
   describe('SayHelloController', function() {
+    let controllerArgs = {
+      $scope: {
+        catchSubmit: null,
+        name: 'test',
+        $digest: function() {
+          return 'digested';
+        },
+      },
+    };
 
     it('Controller is implemented', function() {
-      controller = $controller('SayHelloController', {$scope: {catchSubmit: null, name: 'test'}});
+      controller = $controller('SayHelloController', controllerArgs);
 
       expect(Object.keys(controller).length).toBe(2);
     });
@@ -27,6 +36,16 @@ describe('Controllers', function() {
     it('catchSubmit() method exists and executes without errors', function() {
       let actualResult = null;
       let error = null;
+
+      controller._helloResource = {
+        request: function() {
+          return {
+            send: function(cb) {
+              return cb({data: 'data'});
+            },
+          };
+        },
+      };
 
       try {
         actualResult = controller.catchSubmit();
