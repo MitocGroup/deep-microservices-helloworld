@@ -7,7 +7,7 @@
 
 `DEEP Hello World` (https://github.com/MitocGroup/deep-microservices-helloworld) is a web app that show cases 
 a full stack example of using DEEP Microservices in the context of Platform-as-a-Service. Developers can either 
-fork this repository or `npm install deepify` -g (https://www.npmjs.com/package/deepify) and run in the command line
+fork this repository or `npm install deepify -g` (https://www.npmjs.com/package/deepify) and run in the command line
 `deepify helloworld ~/deep-hello-world`.
 
 ## Getting Started [![Join char on gitter.im](https://img.shields.io/badge/%E2%8A%AA%20gitter%20-join%20chat%20%E2%86%92-brightgreen.svg)](https://gitter.im/MitocGroup/deep-framework)
