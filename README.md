@@ -2,8 +2,7 @@
 ==================
 
 [![Build Status](https://travis-ci.org/MitocGroup/deep-microservices-helloworld.svg?branch=master)](https://travis-ci.org/MitocGroup/deep-microservices-helloworld)
-[![Codacy Badge](https://api.codacy.com/project/badge/9583758a5b30454580527e4f90abc564)](https://www.codacy.com/app/MitocGroup/deep-microservices-helloworld)
-[![Coverage Status](https://coveralls.io/repos/MitocGroup/deep-microservices-helloworld/badge.svg?branch=master&service=github)](https://coveralls.io/github/MitocGroup/deep-microservices-helloworld)
+[![Codacy Badge](https://api.codacy.com/project/badge/coverage/9583758a5b30454580527e4f90abc564)](https://www.codacy.com/app/MitocGroup/deep-microservices-helloworld)
 
 `DEEP Hello World` (https://github.com/MitocGroup/deep-microservices-helloworld) is a web app that show cases 
 a full stack example of using DEEP Microservices in the context of Platform-as-a-Service. Developers can either 
@@ -14,18 +13,18 @@ fork this repository or `npm install deepify -g` (https://www.npmjs.com/package/
 
 `DEEP Hello World` can be used by executing the following 4 simple steps in command line:
 
-1. Install DEEP CLI, also known as deepify: `npm install deepify -g`
+1. `npm install deepify -g` # Install DEEP CLI, also known as deepify
 > deepify is a collection of tools that empower developers and devops engineers to automate
 the management of web apps built on top of DEEP ecosystem.
 
-2. Using deepify, dump locally the helloworld example: `deepify helloworld ~/deep-hello-world`
+2. `deepify helloworld ~/deep-hello-world` # Using deepify, dump locally the helloworld example
 > deepify will clone the repository from GitHub and pull all the dependencies in one place.
 
-3. Using deepify, run locally the helloworld example: `deepify server ~/deep-hello-world -o`
+3. `deepify server ~/deep-hello-world -o` # Using deepify, run locally the helloworld example
 > deepify launches a web server that can be used for local development, without making calls
 to web services from cloud providers like AWS.
 
-4. Using deepify, deploy to AWS the helloworld example: `deepify deploy ~/deep-hello-world`
+4. `deepify deploy ~/deep-hello-world` # Using deepify, deploy to AWS the helloworld example
 > deepify provisions the infrastructure and deploys the web app, empowering developers and
 devops engineers to automate the process.
 
