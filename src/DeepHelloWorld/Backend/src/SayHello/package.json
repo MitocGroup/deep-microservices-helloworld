@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "deep-framework": "*",
-    "babel-core": "6.1.*"
+    "babel-core": "5.8.*"
   },
   "devDependencies": {
   },
