@@ -23,7 +23,8 @@
     "Hello World"
   ],
   "scripts": {
-    "postinstall": "BABEL_ENV=production babel -x \".es6\" ./ --out-dir ./"
+    "postinstall": "npm run compile",
+    "compile": "./bin/compile.sh"
   },
   "dependencies": {
     "deep-framework": "1.1.*",
