@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
+path=$1
 BABEL_ENV=production
-path=$(cd $(dirname $0); pwd -P)
 babel=$(which babel)
 
 if [ -z ${babel} ]; then
@@ -22,4 +22,4 @@ fi
 
 echo "Start compiling *.es6 using babel ${babel_version}"
 
-cd ${path}/../; babel -x ".es6" ./ --out-dir ./
+cd ${path}; babel -x ".es6" ./ --out-dir ./
