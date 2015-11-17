@@ -4,14 +4,14 @@ import DeepFramework from 'deep-framework';
 
 export default class extends DeepFramework.Core.AWS.Lambda.Runtime {
   /**
-   * @param {Array} args
+   * @param {*} args
    */
   constructor(...args) {
     super(...args);
   }
 
   /**
-   * @param request
+   * @param {Object} request
    */
   handle(request) {
     let payload = {
@@ -48,12 +48,8 @@ export default class extends DeepFramework.Core.AWS.Lambda.Runtime {
 
     let fileName = `request_payload_${(new Date()).toISOString()}`;
 
-    fs.system.writeFile(fileName, JSON.stringify(payload), function(error) {
-      if (error) {
-        callback(error, null);
-      } else {
-        callback(null, fileName);
-      }
+    fs.system.writeFile(fileName, JSON.stringify(payload), (error) => {
+      error ? callback(error, null) : callback(null, fileName);
     });
   }
 
@@ -66,12 +62,8 @@ export default class extends DeepFramework.Core.AWS.Lambda.Runtime {
   persistPayloadInDb(payload, callback) {
     let db = this.kernel.get('db');
 
-    db.get('Name').createItem(payload, function(error, NameModel) {
-      if (error) {
-        callback(error, null);
-      } else {
-        callback(null, NameModel);
-      }
+    db.get('Name').createItem(payload, (error, NameModel) => {
+      error ? callback(error, null) : callback(null, NameModel);
     });
   }
 }
