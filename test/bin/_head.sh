@@ -51,7 +51,7 @@ subpath_run_cmd () {
                 echo "${REPLACE_VALUE}"
 
                 echo "CONTENT BEFORE:"
-                head -20 ./coverage/report.json
+                head -20 ./coverage/coverage-final.json
 
                 export PATH_TO_TEST_TDF_FILE="$(find ./coverage -name 'coverage-final.json')"
                 sed "s/${SEARCH_VALUE}/${REPLACE_VALUE}/g" "${PATH_TO_TEST_TDF_FILE}" > ./coverage/report.json
