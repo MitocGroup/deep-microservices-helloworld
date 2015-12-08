@@ -2,10 +2,6 @@
 
 source $(dirname $0)/_head.sh
 
-#### Run Coverage ###
-__CMD='npm run coverage'
-subpath_run_cmd ${__SRC_PATH} "$__CMD"
-
 ### Merge Coverage results ###
 istanbul-combine -d ${__COVERAGE_PATH} -r lcov -p both \
   ${__SRC_PATH}*/Tests/Frontend/coverage/report.json \
