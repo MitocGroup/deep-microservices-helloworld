@@ -42,23 +42,14 @@ subpath_run_cmd () {
                 SEARCH_VALUE='.\/Frontend\/'
                 subpath=${subpath/Tests\/Frontend/Frontend}
 
-                echo "${subpath}"
-
                 ## Escape path for sed using bash find and replace
                 REPLACE_VALUE="${subpath//\//\\/}"
-
-                echo "REPLACE_VALUE:"
-                echo "${REPLACE_VALUE}"
-
-                echo "CONTENT BEFORE:"
-                head -20 ./coverage/coverage-final.json
 
                 export PATH_TO_TEST_TDF_FILE="$(find ./coverage -name 'coverage-final.json')"
                 sed "s/${SEARCH_VALUE}/${REPLACE_VALUE}/g" "${PATH_TO_TEST_TDF_FILE}" > ./coverage/report.json
 
                 echo "CONTENT AFTER:"
                 head -20 ./coverage/report.json
-
             fi
         fi
     done
