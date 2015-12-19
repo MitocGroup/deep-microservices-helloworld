@@ -1,7 +1,6 @@
-#### joe made this: https://goel.io/joe
-
-#####=== JetBrains ===#####
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+# Created by .ignore support plugin (hsz.mobi)
+### JetBrains template
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
 
 *.iml
 
@@ -10,9 +9,9 @@
 # if you remove the above rule, at least ignore the following:
 
 # User-specific stuff:
-# .idea/workspace.xml
-# .idea/tasks.xml
-# .idea/dictionaries
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
 
 # Sensitive or high-churn files:
 # .idea/dataSources.ids
@@ -33,9 +32,15 @@
 *.iws
 
 ## Plugin-specific files:
+#.jshintrc
+
+#####=== OSX ===#####
+.DS_Store
+.AppleDouble
+.LSOverride
 
 # IntelliJ
-out/
+/out/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -48,28 +53,85 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 
-#####=== OSX ===#####
-.DS_Store
-.AppleDouble
-.LSOverride
 
-# Icon must end with two \r
-Icon
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
 
+# C extensions
+*.so
 
-# Thumbnails
-._*
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
 
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
+package/
+packages/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+#Vendor
+vendor/
+
+.sass-cache/
+
+.cfg.deeploy.json
+.cfg.deeploy.json.production
+.cfg.deeploy.json.local
+
+deeploy.json
+deeploy.json.production
+deeploy.json.local
+
+.parameters.json
+
+_test/
+
+#### joe made this: https://goel.io/joe
 
 #####=== Node ===#####
 
@@ -99,19 +161,24 @@ build/Release
 
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
-node_modules
+**/node_modules
+**/src/DeepNgRoot
 
 # Debug log from npm
 npm-debug.log
 
+# Transpiled Lambdas code
+**/Backend/src/**/*.js
 
-#####=== Proprietary ===#####
-lib.compiled
-/tests/*
+# Lambda archives and checksums
+**/Backend/src/**/*.zip
+**/Backend/src/**/*.sfv
+**/Backend/src/**/_config.json
 
+# Frontend dependencies
+**/js/vendor/
 **/Frontend/vendor/
-.idea/
-.parameters.json
-.DS_Store
-deeploy.json
-_config.json
+
+# Coverage files
+**/coverage
+

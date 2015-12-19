@@ -5,7 +5,7 @@
 'use strict';
 
 import chai from 'chai';
-import bootstrap from '../../node_modules/say-hello-test/bootstrap';
+import bootstrap from '../../node_modules/say-hello-world/bootstrap';
 
 suite('Bootstraps', function() {
 
