@@ -5,7 +5,7 @@
 'use strict';
 
 import chai from 'chai';
-import Handler from '../../node_modules/say-hello-test/Handler';
+import Handler from '../../node_modules/say-hello-world/Handler';
 
 suite('Handlers', function() {
   test('Class Handler exists in SayHello', function() {

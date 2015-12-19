@@ -1,9 +1,19 @@
 {
-  "name": "say-hello-test",
+  "name": "say-hello-world",
   "version": "0.0.1",
   "description": "Lambda that says hello to the world",
+  "keywords": [
+    "DEEP",
+    "Digital Enterprise End-To-End Platform",
+    "Hello World"
+  ],
+  "homepage": "https://github.com/MitocGroup/deep-microservices-helloworld",
+  "bugs": {
+    "url": "https://github.com/MitocGroup/deep-microservices-helloworld/issues"
+  },
+  "license": "MIT",
   "author": {
-    "name": "Mitoc Group", 
+    "name": "Mitoc Group",
     "email": "hello@mitocgroup.com",
     "website": "www.mitocgroup.com"
   },
@@ -14,14 +24,10 @@
       "website": "www.deep.mg"
     }
   ],
-  "bugs": {
-    "url": "https://github.com/MitocGroup/deep-framework/issues"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MitocGroup/deep-microservices-helloworld.git"
   },
-  "keywords": [
-    "DEEP",
-    "Digital Enterprise End-To-End Platform",
-    "Hello World"
-  ],
   "scripts": {
     "postinstall": "npm run compile",
     "compile": "deepify compile-es6 `pwd`"
