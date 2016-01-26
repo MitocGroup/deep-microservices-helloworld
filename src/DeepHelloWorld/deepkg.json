@@ -16,6 +16,5 @@
     }
   ],
   "dependencies": {
-    "deep.core.search": "1.0.0"
   }
 }
