@@ -3,7 +3,7 @@
     "say-hello": {
       "description": "Says hello to the world",
       "type": "lambda",
-      "validationSchema": "Name",
+      "validationSchema": "NameData",
       "methods": [
         "POST"
       ],
