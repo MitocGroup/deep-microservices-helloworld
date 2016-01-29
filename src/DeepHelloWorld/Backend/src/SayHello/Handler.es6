@@ -11,25 +11,21 @@ export default class extends DeepFramework.Core.AWS.Lambda.Runtime {
   }
 
   /**
-   * @param {Object} request
+   * @param {Object} nameData
    */
-  handle(request) {
-    let payload = {
-      Name: request.getParam('Name', 'World'),
-    };
-
-    this.persistPayloadInFs(payload, (error, createdFile) => {
+  handle(nameData) {
+    this.persistPayloadInFs(nameData, (error, createdFile) => {
       if (error) {
         return this.createError(error).send();
       }
 
-      this.persistPayloadInDb(payload, (error, NameModel) => {
+      this.persistPayloadInDb(nameData, (error, NameModel) => {
         if (error) {
           return this.createError(error).send();
         }
 
         this.createResponse({
-          msg: `Hello ${payload.Name}!`,
+          msg: `Hello ${nameData.Name}!`,
           db: NameModel.get(),
           fs: createdFile,
         }).send();
