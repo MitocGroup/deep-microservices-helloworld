@@ -42,7 +42,7 @@ export default class extends DeepFramework.Core.AWS.Lambda.Runtime {
   persistPayloadInFs(payload, callback) {
     let fs = this.kernel.get('fs');
 
-    //replace to be able to use in Windows filenames
+    //replace special chars in timestamp to be able to be used in Windows filenames
     let timestamp = (new Date()).toISOString().(/[\<\>\:\"\/\\\|\?\*]/g, '_');
 
     let fileName = `request_payload_${timestamp}`;
