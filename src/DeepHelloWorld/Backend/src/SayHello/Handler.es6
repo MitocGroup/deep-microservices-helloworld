@@ -42,7 +42,7 @@ export default class extends DeepFramework.Core.AWS.Lambda.Runtime {
   persistPayloadInFs(payload, callback) {
     let fs = this.kernel.get('fs');
 
-    let fileName = `request_payload_${(new Date()).toISOString()}`;
+    let fileName = `request_payload_${Date.now()}`;
 
     fs.system.writeFile(fileName, JSON.stringify(payload), (error) => {
       error ? callback(error, null) : callback(null, fileName);
