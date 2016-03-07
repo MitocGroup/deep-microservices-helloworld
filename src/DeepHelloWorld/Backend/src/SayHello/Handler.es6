@@ -42,10 +42,7 @@ export default class extends DeepFramework.Core.AWS.Lambda.Runtime {
   persistPayloadInFs(payload, callback) {
     let fs = this.kernel.get('fs');
 
-    //replace special chars in timestamp to be able to be used in Windows filenames
-    let timestamp = (new Date()).toISOString().replace(/[\<\>\:\"\/\\\|\?\*]/g, '_');
-
-    let fileName = `request_payload_${timestamp}`;
+    let fileName = `request_payload_${Date.now()}`;
 
     fs.system.writeFile(fileName, JSON.stringify(payload), (error) => {
       error ? callback(error, null) : callback(null, fileName);
