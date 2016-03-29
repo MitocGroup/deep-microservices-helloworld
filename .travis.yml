@@ -1,8 +1,8 @@
 language: node_js
 sudo: false
 node_js:
-  - '0.12'
   - '4.3'
+  - '5.9'
 cache:
   directories:
     - $(npm root -g)
@@ -19,8 +19,9 @@ env:
     #CODACY_PROJECT_TOKEN=[secured]
     - secure: UKRAvsXLppfNkkwumZFOJyY8tSjBU05eHXED/BLNWvTOWv59I1cp3PQPoKqTO9zf2Fk0hxOgqZJ3UHN3vd1xKUsgTzgrv+uSvXlRmkQc+MS0Fg4QwCm2e1tx8Km4i8S0vDjmN5yMAS23lapd5DRCvLdpHJbbOnbejNahk3JEqQC8XZ3QUqqIuhtOfAsRic+W4vve2KLHYfd5OzM1AD6i8nn855ohlRCm+L/l4UidtT3wDvweAI4D/3GzMYFP75hOVGVplf2tpm4Uz3ZqDqymeZVZYRHsluwKGW4R9wlSYnPhT8BIltYRMc+owCXqbbbGZXxJBtDfX2w9hTHnTyq9aQSyfWkFvZZ2n19H47TgmzomS3dV1zPg1UbrbBWoQoqfrFPFZd46ZCEAt6Cy3DypYL+bn6gUEtRnMhEV2pc9JtOx1o1UVv+BVHeDlR05jwEN3x99KQBi+OJs57Yi2zOJ17akgtWK9Wyl9jBQrdTXuTheSrCHDIdbH8j2a1HAlmwRVMwFlhzX6FSummtOlXC3pkB9GudHp3vgTojjq1OWmu5ekpkGNqSYs6zdwlsxk8kxaly+dh48Wzt5Otm3+JCVBLIOiIBwsaDYRV+ZxDhL4+q0D+nkm8D8wwBeOmHG20CT0kT1c1cRpKaqwXApKdyeSUB+H50uo+Ywuylb9KB70t4=
 before_install:
+  - cp test/package.json .
   - npm install -g deepify
-  - npm install -g jspm
+  - npm install -g jspm@0.16.15
   - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
   - npm install -g babel@5.8.x
   - npm install -g browserify@11.2.x
@@ -31,7 +32,7 @@ before_install:
   - npm install -g jasmine-core@2.3.x
   - npm install -g istanbul@0.3.x
   - npm install -g istanbul-combine@0.3.x
-  - npm install -g phantomjs@1.9.x
+  - npm run phantomjs-install
   - npm install -g karma@0.13.x
   - npm install -g karma-jspm@2.0.x
   - npm install -g karma-jasmine@0.3.x
@@ -40,6 +41,5 @@ before_install:
   - npm install -g karma-verbose-reporter@0.0.x
   - npm install -g karma-phantomjs-launcher@0.2.x
   - npm install -g karma-ng-html2js-preprocessor@0.2.x
-  - cp test/package.json .
 after_success:
   - npm run coverage
