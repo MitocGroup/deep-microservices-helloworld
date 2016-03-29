@@ -1,5 +1,5 @@
 language: node_js
-sudo: required
+sudo: false
 node_js:
   - '4.3'
   - '5.9'
@@ -18,11 +18,12 @@ env:
     - secure: HkST7Rqo02BFYp3+XGBzz7fhsKxwxSzr2EeTphbj+8Xa5kjTDUlDInLdrzoKfKK/zJy6njgZp4q561KV3L6HEHlnNjy5e4co1GgkXwrjOsXV+r32H8PHAMvbDCJyOxgERtPxiryfXkmLBkyWhlebAmtyY1Op/O/qQajvQPIboTbDP5awqXyAF/Gitbal88K8fwgHmE/mC9A5MPOttL6PagKkxAiOtE4Z5LuJ13yXHGmJ4KilhfcSw/so0NyqBBlQww22YbfJIsOAGODSlWep9HTo1oS9mZnTTLBY7j9HHJStXtP4pZaNCHeNTMKOf1ZedWcvguADDe32dkU6TfxdwkJj7vtXxUBiWyy7JN8fq3pGrgu2Izpe42DSSqA9bgTfP7HbebvECHcrgGZshgDFR3gRo4ihRnjPfTAswEGnPBNTlISGwxRp7c2a7Ao7Ofkz9o+4ArYvP1BmYwOyZ6hKfKx9zTLHnMTfadygcYH8r0t09a5imK3JKcGWABLpUcDRwzUKLigk8j9tkIKgfcclnPI4r7c1pK5E3uQfTln21OrU02bhuwcCL5VgW1MKHS5NZbZu9kSorBqSqb3DBSjsr5GTpHPvovwsW6YmbD/1nBXThlnAga5cyJ84AnWenOWVa+yiq6AezkDo/AZqBeaNguUBrDhoMHM8jSu+dV9FuP0=
     #CODACY_PROJECT_TOKEN=[secured]
     - secure: UKRAvsXLppfNkkwumZFOJyY8tSjBU05eHXED/BLNWvTOWv59I1cp3PQPoKqTO9zf2Fk0hxOgqZJ3UHN3vd1xKUsgTzgrv+uSvXlRmkQc+MS0Fg4QwCm2e1tx8Km4i8S0vDjmN5yMAS23lapd5DRCvLdpHJbbOnbejNahk3JEqQC8XZ3QUqqIuhtOfAsRic+W4vve2KLHYfd5OzM1AD6i8nn855ohlRCm+L/l4UidtT3wDvweAI4D/3GzMYFP75hOVGVplf2tpm4Uz3ZqDqymeZVZYRHsluwKGW4R9wlSYnPhT8BIltYRMc+owCXqbbbGZXxJBtDfX2w9hTHnTyq9aQSyfWkFvZZ2n19H47TgmzomS3dV1zPg1UbrbBWoQoqfrFPFZd46ZCEAt6Cy3DypYL+bn6gUEtRnMhEV2pc9JtOx1o1UVv+BVHeDlR05jwEN3x99KQBi+OJs57Yi2zOJ17akgtWK9Wyl9jBQrdTXuTheSrCHDIdbH8j2a1HAlmwRVMwFlhzX6FSummtOlXC3pkB9GudHp3vgTojjq1OWmu5ekpkGNqSYs6zdwlsxk8kxaly+dh48Wzt5Otm3+JCVBLIOiIBwsaDYRV+ZxDhL4+q0D+nkm8D8wwBeOmHG20CT0kT1c1cRpKaqwXApKdyeSUB+H50uo+Ywuylb9KB70t4=
+before_script:
+  - mkdir travis-phantomjs
+  - wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -O $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+  - tar -xvf $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -C $PWD/travis-phantomjs
+  - export PATH=$PWD/travis-phantomjs:$PATH
 before_install:
-  - wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
-  - tar -xjf phantomjs-2.0.0-ubuntu-12.04.tar.bz2
-  - rm -rf /usr/local/phantomjs/bin/phantomjs
-  - mv phantomjs /usr/local/phantomjs/bin/phantomjs
   - cp test/package.json .
   - npm install -g deepify
   - npm install -g jspm@0.16.15
