@@ -29,6 +29,7 @@
     "url": "https://github.com/MitocGroup/deep-microservices-helloworld.git"
   },
   "scripts": {
+    "phantomjs-install": "if [ -f '.travis.yml' ]; then test/bin/phantomjs/install.sh; else bin/phantomjs/install.sh; fi",
     "install": "if [ -f '.travis.yml' ]; then test/bin/install.sh; else bin/install.sh; fi",
     "test": "if [ -f '.travis.yml' ]; then test/bin/test.sh; else bin/test.sh; fi",
     "coverage": "if [ -f '.travis.yml' ]; then test/bin/coverage.sh; else bin/coverage.sh; fi",
