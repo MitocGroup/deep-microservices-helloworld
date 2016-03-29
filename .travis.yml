@@ -41,7 +41,5 @@ before_install:
   - npm install -g karma-verbose-reporter@0.0.x
   - npm install -g karma-phantomjs-launcher@0.2.x
   - npm install -g karma-ng-html2js-preprocessor@0.2.x
-  - test/bin/phantomjs_install.sh
-
 after_success:
   - npm run coverage
