@@ -6,7 +6,6 @@ node_js:
 cache:
   directories:
     - $(npm root -g)
-    - "travis-phantomjs"
 branches:
   only:
     - master
