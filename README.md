@@ -33,26 +33,26 @@ inside Git Bash.
 ### Step 2. Install Microservice(s) Locally
 
 ```bash
-deepify install github://MitocGroup/deep-microservices-skeleton ~/deep-microservices-skeleton
+deepify install github://MitocGroup/deep-microservices-helloworld ~/deep-microservices-helloworld
 ```
 
 > Path parameter in all `deepify` commands is optional and if not specified, assumes current
-working directory. Therefore you can skip `~/deep-microservices-skeleton` by executing
-`mkdir ~/deep-microservices-skeleton && cd ~/deep-microservices-skeleton` before `deepify install`.
+working directory. Therefore you can skip `~/deep-microservices-helloworld` by executing
+`mkdir ~/deep-microservices-helloworld && cd ~/deep-microservices-helloworld` before `deepify install`.
 
 ### Step 3. Run Microservice(s) in Development
 
 ```bash
-deepify server ~/deep-microservices-skeleton -o
+deepify server ~/deep-microservices-helloworld -o
 ```
 
 > When this step is finished, you can open in your browser the link *http://localhost:8000*
-and enjoy the deep-microservices-skeleton running locally.
+and enjoy the deep-microservices-helloworld running locally.
 
 ### Step 4. Run Microservice(s) in Production
 
 ```bash
-deepify deploy ~/deep-microservices-skeleton
+deepify deploy ~/deep-microservices-helloworld
 ```
 
 > Amazon CloudFront distribution takes up to 20 minutes to provision, therefore don’t worry
@@ -61,7 +61,7 @@ if it returns an HTTP error in the first couple of minutes.
 ### Step 5. Remove Microservice(s) from Production
 
 ```bash
-deepify undeploy ~/deep-microservices-skeleton
+deepify undeploy ~/deep-microservices-helloworld
 ```
 
 > Amazon CloudFront distribution takes up to 20 minutes to unprovision. That's why `deepify`
@@ -70,20 +70,20 @@ command checks every 30 seconds if it's disabled and when successful, removes it
 
 ## Developer Resources
 
-Having questions related to deep-microservices-skeleton?
+Having questions related to deep-microservices-helloworld?
 
 - Ask questions: https://stackoverflow.com/questions/tagged/deep-framework
 - Chat with us: https://gitter.im/MitocGroup/deep-framework
 - Send an email: feedback@deep.mg
 
-Interested in contributing to deep-microservices-skeleton?
+Interested in contributing to deep-microservices-helloworld?
 
-- Contributing: https://github.com/MitocGroup/deep-microservices-skeleton/blob/master/CONTRIBUTING.md
-- Issue tracker: https://github.com/MitocGroup/deep-microservices-skeleton/issues
-- Releases: https://github.com/MitocGroup/deep-microservices-skeleton/releases
-- Roadmap: https://github.com/MitocGroup/deep-microservices-skeleton/blob/master/ROADMAP.md
+- Contributing: https://github.com/MitocGroup/deep-microservices-helloworld/blob/master/CONTRIBUTING.md
+- Issue tracker: https://github.com/MitocGroup/deep-microservices-helloworld/issues
+- Releases: https://github.com/MitocGroup/deep-microservices-helloworld/releases
+- Roadmap: https://github.com/MitocGroup/deep-microservices-helloworld/blob/master/ROADMAP.md
 
-Looking for web applications that use (or are similar to) deep-microservices-skeleton?
+Looking for web applications that use (or are similar to) deep-microservices-helloworld?
 
 - Hello World: https://hello.deep.mg | https://github.com/MitocGroup/deep-microservices-helloworld
 - Todo App: https://todo.deep.mg | https://github.com/MitocGroup/deep-microservices-todo-app
@@ -96,4 +96,4 @@ This repository is being sponsored by:
 - [DEEP Marketplace](https://www.deep.mg)
 
 This code can be used under MIT license:
-> See [LICENSE](https://github.com/MitocGroup/deep-microservices-skeleton/blob/master/LICENSE) for more details.
+> See [LICENSE](https://github.com/MitocGroup/deep-microservices-helloworld/blob/master/LICENSE) for more details.
