@@ -1,183 +1,99 @@
-![Digital Enterprise End-to-end Platform Microservices](https://github.com/MitocGroup/deep-microservices-helloworld/blob/master/src/DeepHelloWorld/Frontend/img/logo.png) DEEP Hello World 
-==================
+deep-microservices-helloworld
+=============================
 
 [![Build Status](https://travis-ci.org/MitocGroup/deep-microservices-helloworld.svg?branch=master)](https://travis-ci.org/MitocGroup/deep-microservices-helloworld)
 [![Codacy Badge](https://api.codacy.com/project/badge/coverage/9583758a5b30454580527e4f90abc564)](https://www.codacy.com/app/MitocGroup/deep-microservices-helloworld)
 
-`DEEP Hello World` (https://github.com/MitocGroup/deep-microservices-helloworld) is a web app that show cases 
-a full stack example of using DEEP Microservices in the context of Platform-as-a-Service. Developers can either 
-fork this repository or run in the command line `npm install deepify -g` (https://www.npmjs.com/package/deepify) 
-and `deepify helloworld ~/deep-hello-world`.
-
-## Getting Started [![Join char on gitter.im](https://img.shields.io/badge/%E2%8A%AA%20gitter%20-join%20chat%20%E2%86%92-brightgreen.svg)](https://gitter.im/MitocGroup/deep-framework)
-
-`DEEP Hello World` can be used by executing the following 4 simple steps in command line:
-
-1. Install DEEP CLI, also known as deepify:
-
-  `npm install deepify -g`
-> deepify is a collection of tools that empower developers and devops engineers to automate
-the management of web apps built on top of DEEP ecosystem.
-
-  *Note: If you want to use `deepify` on Windows, please follow the steps from
-  [Windows Configuration](https://github.com/MitocGroup/deep-framework/blob/master/docs/windows.md)
-  before running `npm install deepify -g` and make sure all `npm` and `deepify` commands are executed
-  inside Git Bash.*
-
-2. Using deepify, dump locally the helloworld example:
-
-  `deepify helloworld ~/deep-hello-world`
-> deepify will clone the repository from GitHub and pull all the dependencies in one place.
-
-3. Using deepify, run locally the helloworld example
-
-  `deepify server ~/deep-hello-world -o`
-> deepify launches a web server that can be used for local development, without making calls
-to web services from cloud providers like AWS.
-
-4. Using deepify, deploy to AWS the helloworld example
-
-  `deepify deploy ~/deep-hello-world`
-> deepify provisions the infrastructure and deploys the web app, empowering developers and
-devops engineers to automate the process.
-
-  *Note: Amazon CloudFront distribution takes up to 20 minutes to provision, 
-  therefore don’t worry if it returns an HTTP error in the first couple of minutes.*
-
-To learn more about `DEEP CLI` and `DEEP Framework`, please follow the link
-[What is DEEP Framework?](https://github.com/MitocGroup/deep-framework/blob/master/README.md#what-is-deep-framework-)
-
-### Running Microservices in Development
-
-See Step 3 in 
-[Getting Started](https://github.com/MitocGroup/deep-microservices-helloworld/blob/master/README.md#getting-started)
-> Coming soon (more details)
-
-### Running Microservices in Production
-
-See Step 4 in 
-[Getting Started](https://github.com/MitocGroup/deep-microservices-hellowworld/blob/master/README.md#getting-started)
-> Coming soon (more details)
+deep-microservices-helloworld is a very simple microservice designed to illustrate the basic syntax for
+constructing a web application built of top of [DEEP Framework](https://github.com/MitocGroup/deep-framework).
+This repository is open sourced to show case how developers can build and deploy hassle-free cloud-native
+web applications using microservices architecture and serverless computing.
 
 
-## Directory Layout [![Join char on gitter.im](https://img.shields.io/badge/%E2%8A%AA%20gitter%20-join%20chat%20%E2%86%92-brightgreen.svg)](https://gitter.im/MitocGroup/deep-framework)
+## Getting Started
 
-```
-DeepHelloWorld/         --> root folder of the DeepHelloWorld microservice
-  Frontend/             --> this folder includes everything front-end related
-    .deepignore         --> this file is used only when front-end is supposed to be ignored
-    _build/             --> this folder, if exists, is used by default and everything else is ignored
-    bootstrap.js        --> this file loads the front-end functionality of particular JavaScript app
-    index.html          --> this file is required only for root microservice
-    js/                 --> this folder includes all JavaScript files
-      package.json      --> this file contains the metadata of current front-end (required by JSPM)
-      config.system.js  --> this file contains the config data used by JSPM
-      app/              --> this folder includes the JavaScript files for web app (e.g. AngularJS, React.js, Backbone.js, etc.)
-      lib/              --> this folder includes the JavaScript libraries
-      vendor/           --> this folder includes the JavaScript files provided by vendors
-    css/                --> this folder includes all stylesheets
-    img/                --> this folder includes all images
-    fonts/              --> this folder includes all fonts
-    ...
-  Backend/              --> this folder includes everything back-end related
-    .deepignore         --> this file is used only when back-end is supposed to be ignored
-    resources.json      --> this file contains the metadata of back-end resoures like Lambda, API Gateway, and so on
-    src/                --> this folder includes all files used by back-end
-      SayHello/         --> this folder includes the SayHello code loaded into Lambda
-        bootstrap.js    --> this file loads the back-end functionality of current Lambda
-        package.json    --> this file contains the metadata of current back-end (required by NPM)
-        Handler.js      --> this file contains the main code (entry point) for current Lambda
-    ...
-  Models/               --> this folder includes everything models related
-    Account.json        --> this file is an example of the Account's model definition
-    User.json           --> this file is an example of the User's model definition
-    ...
-  Docs/                 --> this folder includes everything documentation related
-    index.md            --> this file is an example of index markdown documentation
-    ...
-  Tests/                --> this folder includes everything testing related
-    Frontend/           --> this folder includes front-end related tests
-    Backend/            --> this folder includes back-end related tests
-    ...
-  deepkg.json           --> this file contains the metadata of this microservice
-  parameters.json       --> this file contains the parameters used by this microservice
+### Step 1. Pre-requisites
+
+- [x] [Create an Amazon Web Services account](https://www.youtube.com/watch?v=WviHsoz8yHk)
+- [x] [Configure AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
+- [x] [Get Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [x] [JDK 8 and JRE 8 Installation Start Here](https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html)
+- [x] [Install nvm](https://github.com/creationix/nvm#install-script) and [use node v4.3+](https://github.com/creationix/nvm#usage)
+- [ ] Install DEEP CLI, also known as `deepify`:
+
+```bash
+npm install deepify -g
 ```
 
+> If you want to use `deepify` on Windows, please follow the steps from
+[Windows Configuration](https://github.com/MitocGroup/deep-framework/blob/master/docs/windows.md)
+before running `npm install deepify -g` and make sure all `npm` and `deepify` commands are executed
+inside Git Bash.
 
-## How do I test this project? [![Join char on gitter.im](https://img.shields.io/badge/%E2%8A%AA%20gitter%20-join%20chat%20%E2%86%92-brightgreen.svg)](https://gitter.im/MitocGroup/deep-framework)
+### Step 2. Install Microservice(s) Locally
 
-Our goal is to support two kinds of testing in the deep-microservice-helloworld: Unit tests and End to End tests.
-
-### Running Unit Tests
-
-Initially microservice preconfigured with health-check unit tests. These are written in
-[Jasmine](https://github.com/jasmine/jasmine), which we run with 
-[Karma Test Runner](https://github.com/karma-runner/karma). We provide a Karma configuration file to run them.
-
-* the configuration is found at `config.karma.js`
-* the unit tests are found next to the code they are testing and are named as `*.spec.js`
-
-The easiest way to run the unit tests is to use the supplied npm script:
-
-```
-karma start path/to/config.karma.js
+```bash
+deepify install github://MitocGroup/deep-microservices-skeleton ~/deep-microservices-skeleton
 ```
 
-This script will start the Karma test runner to execute the unit tests. Moreover, Karma will sit and
-watch the source and test files for changes and then re-run the tests whenever any of them change.
-This is the recommended strategy; if your unit tests are being run every time you save a file then
-you receive instant feedback on any changes that break the expected code functionality.
+> Path parameter in all `deepify` commands is optional and if not specified, assumes current
+working directory. Therefore you can skip `~/deep-microservices-skeleton` by executing
+`mkdir ~/deep-microservices-skeleton && cd ~/deep-microservices-skeleton` before `deepify install`.
 
-You can also ask Karma to do a single run of the tests and then exit.  
+### Step 3. Run Microservice(s) in Development
 
-Besides of Karma we also provide ```Mocha + Chai``` preconfiguration for backend unit testing.
+```bash
+deepify server ~/deep-microservices-skeleton -o
+```
 
-As best practice was configured code coverage tool ```Istanbul``` to gather actual code coverage metrics in ES6 
-without code transpiling (was used ```isparta``` reporter).
+> When this step is finished, you can open in your browser the link *http://localhost:8000*
+and enjoy the deep-microservices-skeleton running locally.
 
-### Running End to End Tests
+### Step 4. Run Microservice(s) in Production
 
-Coming soon
+```bash
+deepify deploy ~/deep-microservices-skeleton
+```
+
+> Amazon CloudFront distribution takes up to 20 minutes to provision, therefore don’t worry
+if it returns an HTTP error in the first couple of minutes.
+
+### Step 5. Remove Microservice(s) from Production
+
+```bash
+deepify undeploy ~/deep-microservices-skeleton
+```
+
+> Amazon CloudFront distribution takes up to 20 minutes to unprovision. That's why `deepify`
+command checks every 30 seconds if it's disabled and when successful, removes it from your account.
 
 
-## How can I get involved? [![Join char on gitter.im](https://img.shields.io/badge/%E2%8A%AA%20gitter%20-join%20chat%20%E2%86%92-brightgreen.svg)](https://gitter.im/MitocGroup/deep-framework)
+## Developer Resources
 
-### Feedback
+Having questions related to deep-microservices-skeleton?
 
-We are eager to get your feedback, so please use whatever communication channel you prefer:
-- [github issues](https://github.com/MitocGroup/deep-microservices-helloworld/issues)
-- [gitter chat room](https://gitter.im/MitocGroup/deep-framework)
-- [deep email address](mailto:feedback@deep.mg)
+- Ask questions: https://stackoverflow.com/questions/tagged/deep-framework
+- Chat with us: https://gitter.im/MitocGroup/deep-framework
+- Send an email: feedback@deep.mg
 
-### Contribution
+Interested in contributing to deep-microservices-skeleton?
 
-This project is open source, and we encourage developers to contribute. Here below is the easiest way to do so:
+- Contributing: https://github.com/MitocGroup/deep-microservices-skeleton/blob/master/CONTRIBUTING.md
+- Issue tracker: https://github.com/MitocGroup/deep-microservices-skeleton/issues
+- Releases: https://github.com/MitocGroup/deep-microservices-skeleton/releases
+- Roadmap: https://github.com/MitocGroup/deep-microservices-skeleton/blob/master/ROADMAP.md
 
-1. [Fork](http://help.github.com/forking/) this repository in GitHub.
-2. Develop the feature in your repository. Make one or more commits to your repository in GitHub.
-3. Perform a [pull request](http://help.github.com/pull-requests/) from your repository back into original repository in GitHub.
+Looking for web applications that use (or are similar to) deep-microservices-skeleton?
 
-Make sure you update `package.json` (or `deepkg.json`, depends on the use case) and put your name and contact information in contributors section. We would like to recognize the work and empower every contributor in creative ways :)
+- Hello World: https://hello.deep.mg | https://github.com/MitocGroup/deep-microservices-helloworld
+- Todo App: https://todo.deep.mg | https://github.com/MitocGroup/deep-microservices-todo-app
+- Enterprise Software Marketplace: https://www.deep.mg
 
-### Roadmap
-
-Our short-to-medium-term roadmap items, in order of descending priority:
-
-Feature | Details | Owner
---------|---------|------
-Implement end-to-end testing | To be updated | [@vcernomschi](https://github.com/vcernomschi)
-
-### Changelog
-
-Changelog files are located in `/changelog` folder.
-> See [CHANGELOG.md](https://github.com/MitocGroup/deep-microservices-helloworld/blob/master/CHANGELOG.md) for latest changelog.
-
-### License
-
-This repository can be used under the MIT license.
-> See [LICENSE](https://github.com/MitocGroup/deep-microservices-helloworld/blob/master/LICENSE) for more details.
-
-### Sponsors
+## Sponsors
 
 This repository is being sponsored by:
-> [Mitoc Group](http://www.mitocgroup.com)
+- [Mitoc Group](https://www.mitocgroup.com)
+- [DEEP Marketplace](https://www.deep.mg)
+
+This code can be used under MIT license:
+> See [LICENSE](https://github.com/MitocGroup/deep-microservices-skeleton/blob/master/LICENSE) for more details.
