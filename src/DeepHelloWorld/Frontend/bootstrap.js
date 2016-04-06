@@ -10,7 +10,7 @@
     var realPath = asset.locate(assetPath);
 
     xhttp.onreadystatechange = function () {
-      if (xhttp.readyState == 4 && xhttp.status == 200) {
+      if (xhttp.readyState === 4 && xhttp.status === 200) {
         callback(xhttp.responseText);
       }
     };
@@ -19,7 +19,7 @@
     xhttp.send();
   }
 
-  loadAsset("@deep-hello-world:view/hello.html", function(plainHtml) {
+  loadAsset('@deep-hello-world:view/hello.html', function(plainHtml) {
     var body = document.body;
     body.innerHTML = plainHtml;
 
@@ -39,6 +39,6 @@
           dataTag.innerHTML = JSON.stringify(response.data, null, '  ');
         });
       });
-    })
+    });
   });
 })(DeepFramework);
