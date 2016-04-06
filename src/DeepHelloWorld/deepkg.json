@@ -1,6 +1,6 @@
 {
   "identifier": "deep-hello-world",
-  "name": "Deep Hello World",
+  "name": "deep-hello-world",
   "description": "Example microservice that does hello world",
   "version": "0.0.1",
   "frontendEngine": ["vanilla"],
