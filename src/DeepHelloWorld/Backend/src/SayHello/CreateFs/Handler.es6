@@ -31,6 +31,12 @@ export default class extends DeepFramework.Core.AWS.Lambda.Runtime {
     });
   }
 
+  /**
+   *
+   * @param {String} fileName
+   * @returns {String}
+   * @private
+   */
   _getFileLink(fileName) {
     let s3fs = this._fs.public;
 
