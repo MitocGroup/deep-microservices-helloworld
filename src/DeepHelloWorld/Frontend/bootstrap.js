@@ -1,16 +1,44 @@
-'use strict';
-'format es6';
+(function(framework) {
+  'use strict';
 
-export default function deepHelloWorld() {
-  return System.import('/hello.world.example/js/app/angular/index.js');
-}
+  var security = framework.Kernel.get('security');
+  var resource = framework.Kernel.get('resource');
+  var asset = framework.Kernel.get('asset');
 
-export function configLoad() {
-  return new Promise((resolve, reject) => {
-    let deepSecurity = DeepFramework.Kernel.get('security');
+  function loadAsset(assetPath, callback) {
+    var xhttp = new XMLHttpRequest();
+    var realPath = asset.locate(assetPath);
 
-    deepSecurity.anonymousLogin((token) => {
-      resolve(token);
-    });
+    xhttp.onreadystatechange = function () {
+      if (xhttp.readyState == 4 && xhttp.status == 200) {
+        callback(xhttp.responseText);
+      }
+    };
+
+    xhttp.open('GET', realPath, true);
+    xhttp.send();
+  }
+
+  loadAsset("@deep-hello-world:view/hello.html", function(plainHtml) {
+    var body = document.body;
+    body.innerHTML = plainHtml;
+
+    var sendBtn = body.querySelector('#send-name');
+    var dataTag = body.querySelector('#data');
+    var nameInput = body.querySelector('#name');
+
+    sendBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      var payload = {Name: nameInput.value};
+      var checkedResource = body.querySelector('input[name="resource"]:checked');
+      var resourceIdentifier = '@deep-hello-world:say-hello:create-' + checkedResource.value;
+
+      security.anonymousLogin(function() {
+        resource.get(resourceIdentifier).request(payload).send(function(response) {
+          dataTag.innerHTML = JSON.stringify(response.data, null, '  ');
+        });
+      });
+    })
   });
-}
+})(DeepFramework);

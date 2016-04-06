@@ -1,5 +1,5 @@
 {
-  "name": "say-hello-world",
+  "name": "say-hello-create-db",
   "version": "0.0.1",
   "description": "Lambda that says hello to the world",
   "keywords": [
