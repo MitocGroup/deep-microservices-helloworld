@@ -1,8 +1,9 @@
 {
-  "identifier": "hello.world.example",
-  "name": "HelloWorld",
+  "identifier": "deep-hello-world",
+  "name": "Deep Hello World",
   "description": "Example microservice that does hello world",
   "version": "0.0.1",
+  "frontendEngine": ["vanilla"],
   "author": {
     "name": "Mitoc Group",
     "email": "hello@mitocgroup.com",
