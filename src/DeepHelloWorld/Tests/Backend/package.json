@@ -33,6 +33,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "chai": "^3.x.x"
+    "chai": "^3.x.x",
+    "deep-framework": "^1.x.x"
   }
 }
