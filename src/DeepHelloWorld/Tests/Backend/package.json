@@ -29,11 +29,9 @@
     "url": "https://github.com/MitocGroup/deep-microservices-helloworld.git"
   },
   "scripts": {
+    "postinstall": "npm install -g deep-framework && npm link chai deep-framework",
     "test": "babel-node `which istanbul` cover --report lcov _mocha -- --ui tdd --recursive --reporter spec test/**/*.spec.js"
   },
   "dependencies": {},
-  "devDependencies": {
-    "chai": "^3.x.x",
-    "deep-framework": "^1.x.x"
-  }
+  "devDependencies": {}
 }
