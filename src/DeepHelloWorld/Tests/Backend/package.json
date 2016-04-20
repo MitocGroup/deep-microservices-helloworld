@@ -32,8 +32,5 @@
     "test": "babel-node `which istanbul` cover --report lcov _mocha -- --ui tdd --recursive --reporter spec test/**/*.spec.js"
   },
   "dependencies": {},
-  "devDependencies": {
-    "chai": "3.2.*",
-    "say-hello-world": "file:../../Backend/src/SayHello"
-  }
+  "devDependencies": {}
 }
