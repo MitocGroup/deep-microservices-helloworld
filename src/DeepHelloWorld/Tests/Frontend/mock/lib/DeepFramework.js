@@ -16,8 +16,8 @@ DeepFramework.Kernel.load({
     }
   },
   "microservices":{
-    "hello.world.example":{
-      "identifier":"hello.world.example",
+    "deep-hello-world":{
+      "identifier":"deep-hello-world",
       "localPath":"/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/HelloWorld",
       "resources":{
         "sample":{
