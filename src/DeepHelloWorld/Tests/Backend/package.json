@@ -34,6 +34,8 @@
   "dependencies": {},
   "devDependencies": {
     "chai": "3.2.*",
-    "say-hello-world": "file:../../Backend/src/SayHello"
+    "say-hello-create-db": "file:../../Backend/src/SayHello/CreateDb",
+    "say-hello-create-fs": "file:../../Backend/src/SayHello/CreateFs",
+    "say-hello-create-msg": "file:../../Backend/src/SayHello/CreateMsg"
   }
 }
