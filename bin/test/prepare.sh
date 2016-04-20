@@ -2,7 +2,8 @@
 
 source $(dirname $0)/_head.sh
 
-npm install -g babel@5.8.x &&\
+#update in sceleton
+npm install -g babel@5.8.19 &&\
 npm install -g deepify &&\
 npm install -g jspm@0.16.15 &&\
 npm install -g browserify@11.2.x &&\
