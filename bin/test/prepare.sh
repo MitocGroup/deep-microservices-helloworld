@@ -4,6 +4,8 @@ source $(dirname $0)/_head.sh
 
 #update in sceleton
 npm install -g babel-cli@6.x.x &&\
+npm install -g babel-preset-es2015
+npm install -g babel-plugin-add-module-exports
 npm install -g deepify &&\
 npm install -g jspm@0.16.15 &&\
 npm install -g browserify@11.2.x &&\
