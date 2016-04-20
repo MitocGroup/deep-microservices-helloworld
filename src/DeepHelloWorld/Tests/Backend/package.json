@@ -32,5 +32,7 @@
     "test": "babel-node `which istanbul` cover --report lcov _mocha -- --ui tdd --recursive --reporter spec test/**/*.spec.js"
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^3.x.x"
+  }
 }
