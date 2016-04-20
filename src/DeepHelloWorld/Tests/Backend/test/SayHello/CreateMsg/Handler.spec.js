@@ -5,7 +5,7 @@
 'use strict';
 
 import chai from 'chai';
-import Handler from '../../../node_modules/say-hello-create-msg/Handler';
+import Handler from '../../../../../Backend/src/SayHello/CreateMsg/Handler';
 
 suite('Handlers', function() {
   test('Class Handler exists in say-hello-create-msg', function() {

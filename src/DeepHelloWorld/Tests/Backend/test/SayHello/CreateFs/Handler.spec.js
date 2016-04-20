@@ -5,7 +5,7 @@
 'use strict';
 
 import chai from 'chai';
-import Handler from '../../../node_modules/say-hello-create-fs/Handler';
+import Handler from '../../../../../Backend/src/SayHello/CreateFs/Handler';
 
 suite('Handlers', function() {
   test('Class Handler exists in say-hello-create-fs', function() {
