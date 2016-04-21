@@ -1,13 +1,13 @@
 COMPILE_DIR='./compile';
 
+COMPILE() {
+  local resource=$1;
+  deepify compile-es6 ${resource} -x .js --out-dir ${COMPILE_DIR}/${resource}
+}
+
 PREPARE() {
 
-    [ -d ${COMPILE_DIR} ] && rm -rf ${COMPILE_DIR};
-
-    COMPILE() {
-        local resource=$1;
-        deepify compile-es6 ${resource} -x .js --out-dir ${COMPILE_DIR}/${resource}
-    }
+  [ -d ${COMPILE_DIR} ] && rm -rf ${COMPILE_DIR};
 
     COMPILE test;
 
