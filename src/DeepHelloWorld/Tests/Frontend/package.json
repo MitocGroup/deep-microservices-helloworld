@@ -30,7 +30,7 @@
   },
   "scripts": {
     "postinstall": "jspm install",
-    "test": "karma start config.karma.js",
+    "test": "`which karma` start config.karma.js",
     "coverage": "echo \"Coverage has been already gathered during testing for frontend\" && exit 0"
   },
   "jspm": {
