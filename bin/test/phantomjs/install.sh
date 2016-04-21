@@ -16,10 +16,10 @@ Phantomjs_cnpmjs_CDN="https://cnpmjs.org/downloads"
 #Returned code of CDN
 HTTP_CODE=`curl -o /dev/null --silent --head --write-out '%{http_code}\n' ${Phantomjs_bitbucket_CDN}`
 
-#if [ "${HTTP_CODE}"="200" ]; then
-#  echo "Using bitbucket source to download PhantomJS"
-#  npm install -g phantomjs@1.9.18 --phantomjs_cdnurl=${Phantomjs_bitbucket_CDN}
-#else
+if [ "${HTTP_CODE}"="200" ]; then
+  echo "Using bitbucket source to download PhantomJS"
+  npm install -g phantomjs@1.9.18 --phantomjs_cdnurl=${Phantomjs_bitbucket_CDN}
+else
   echo "Using cnmpjs source to download PhantomJS"
   npm install -g phantomjs@1.9.18 --phantomjs_cdnurl=${Phantomjs_cnpmjs_CDN}
-#fi
+fi
