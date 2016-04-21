@@ -30,7 +30,7 @@
   },
   "scripts": {
     "postinstall": "npm link chai ../../Backend/src/SayHello/CreateDb ../../Backend/src/SayHello/CreateFs ../../Backend/src/SayHello/CreateMsg",
-    "test": "babel-node `which istanbul` cover --report lcov _mocha -- --ui tdd --recursive --reporter spec test/**/*.spec.js"
+    "test": "node-bin/test.sh"
   },
   "dependencies": {},
   "devDependencies": {}
