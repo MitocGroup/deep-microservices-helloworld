@@ -1,6 +1,8 @@
+#!/bin/bash
+
 COMPILE_DIR='./compile';
 
-LINK_RES=(node_modules package.json);
+LINK_RES=(node_modules package.json)
 
 COMPILE() {
   local resource=$1;
