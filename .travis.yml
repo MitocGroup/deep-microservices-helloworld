@@ -1,9 +1,9 @@
 language: node_js
 sudo: false
 node_js:
-  - '4.2'
-#  - '4.4'
-#  - '5.10'
+  - '4.3'
+  - '4.4'
+  - '5.10'
 
 cache:
   directories:
@@ -20,7 +20,6 @@ branches:
 
 before_install:
   - cp bin/test/package.json .
-  - npm run prepare
 
 after_success:
   - npm run coverage

@@ -183,3 +183,6 @@ npm-debug.log
 # Coverage files
 **/coverage
 
+# Special for Trevor package.json
+package.json
+

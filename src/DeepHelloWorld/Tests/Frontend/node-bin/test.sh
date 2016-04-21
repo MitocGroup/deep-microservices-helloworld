@@ -1,9 +1,12 @@
-KARMA=$(karma)
+#!/usr/bin/env bash
 
-echo "Karma path: ${KARMA}"
+echo "CI: ${CI}"
+echo "TRAVIS_BUILD_ID: ${TRAVIS_BUILD_ID}"
 
-echo "PATH: ${PATH}"
+if [ "$CI" = "true" ] && [ "$TRAVIS_BUILD_ID" = "" ]; then
+    echo "Running from Trevor"
+fi
 
-cmd='${KARMA} start config.karma.js'
+cmd='karma start config.karma.js'
 
 eval $cmd
