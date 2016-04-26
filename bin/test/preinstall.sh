@@ -2,7 +2,6 @@
 
 source $(dirname $0)/_head.sh
 
-#update in sceleton
 npm install -g babel-cli@6.x.x &&\
 npm install -g babel-preset-es2015
 npm install -g babel-plugin-add-module-exports
@@ -37,7 +36,10 @@ bash `dirname $0`/phantomjs/install.sh
 if [ "${__E2E_WITH_PUBLIC_REPO}" = "${E2E_TESTING}" ] || [ "${__E2E_WITH_PRIVATE_REPO}" = "${E2E_TESTING}" ]; then
   bash `dirname $0`/protractor/install.sh
 
-  npm install babel@5.8.19
+  #install locally, protractor doesn't find babel globally
+  npm install babel-cli@6.x.x &&\
+  npm install babel-preset-es2015 &&\
+  npm install babel-plugin-add-module-exports &&\
   npm install jasmine2-custom-message@0.8.x
 fi
 
