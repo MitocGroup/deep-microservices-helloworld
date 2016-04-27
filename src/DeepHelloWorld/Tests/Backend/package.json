@@ -29,11 +29,9 @@
     "url": "https://github.com/MitocGroup/deep-microservices-helloworld.git"
   },
   "scripts": {
-    "test": "babel-node `which istanbul` cover --report lcov _mocha -- --ui tdd --recursive --reporter spec test/**/*.spec.js"
+    "postinstall": "npm link chai ../../Backend/src/SayHello/CreateDb ../../Backend/src/SayHello/CreateFs ../../Backend/src/SayHello/CreateMsg",
+    "test": "node-bin/test.sh"
   },
   "dependencies": {},
-  "devDependencies": {
-    "chai": "3.2.*",
-    "say-hello-world": "file:../../Backend/src/SayHello"
-  }
+  "devDependencies": {}
 }
