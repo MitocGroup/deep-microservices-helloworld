@@ -5,8 +5,6 @@ import dir from 'node-dir';
 import path from 'path';
 import {Exec} from '../../../node_modules/deepify/lib.compiled/Helpers/Exec';
 
-let expect = chai.expect;
-
 suite('Functional tests', () => {
 
   let inputEventsArray = [];
@@ -24,12 +22,18 @@ suite('Functional tests', () => {
         match: /result.json$/,
         exclude: /^\./,
       }, (err, content, next) => {
-        if (err) throw err;
+        if (err) {
+          throw err;
+        }
+
         expectedResultsArray.push(content);
         next();
       },
       (err, files) => {
-        if (err) throw err;
+        if (err) {
+          throw err;
+        }
+
         expectedResultsFilesArray = files;
       });
 
@@ -37,12 +41,18 @@ suite('Functional tests', () => {
         match: /payload.json$/,
         exclude: /^\./,
       }, (err, content, next) => {
-        if (err) throw err;
+        if (err) {
+          throw err;
+        }
+
         inputEventsArray.push(content);
         next();
       },
       (err, files) => {
-        if (err) throw err;
+        if (err) {
+          throw err;
+        }
+
         inputEventsFilesArray = files;
         done();
       });
@@ -50,7 +60,7 @@ suite('Functional tests', () => {
 
   test('Check relevant of data', () => {
     for (i = 0; i < inputEventsFilesArray.length; i++) {
-      expect(inputEventsFilesArray[i].replace('payload.json', '')).to.equal(
+      chai.expect(inputEventsFilesArray[i].replace('payload.json', '')).to.equal(
         expectedResultsFilesArray[i].replace('result.json', '')
       );
     }
@@ -69,7 +79,7 @@ suite('Functional tests', () => {
       let expectedResult = JSON.parse(expectedResultsArray[i]);
       let actualResult = (lambdaResult.failed) ? JSON.parse(lambdaResult.error) : JSON.parse(lambdaResult.result);
 
-      expect(actualResult).to.eql(expectedResult, `for payload from: ${inputEventsFilesArray[i]}`);
+      chai.expect(actualResult).to.eql(expectedResult, `for payload from: ${inputEventsFilesArray[i]}`);
     }
 
   });

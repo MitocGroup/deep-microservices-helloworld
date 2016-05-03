@@ -1,15 +1,13 @@
-// THIS TEST WAS GENERATED AUTOMATICALLY ON Tue May 03 2016 15:10:58 GMT+0300 (EEST)
+// THIS TEST WAS GENERATED AUTOMATICALLY ON Tue May 03 2016 15:27:56 GMT+0300 (EEST)
 
 'use strict';
 
 import chai from 'chai';
 import Handler from '../../../node_modules/SayHello/CreateMsg/Handler';
 
-let expect = chai.expect;
-
 // @todo: Add more advanced tests
 suite('Handlers', () => {
   test('Class Handler exists in say-hello-create-msg module', () => {
-    expect(Handler).to.be.an('function');
+    chai.expect(Handler).to.be.an('function');
   });
 });
