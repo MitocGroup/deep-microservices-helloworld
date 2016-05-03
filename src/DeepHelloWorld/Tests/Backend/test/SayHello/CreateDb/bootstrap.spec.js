@@ -1,15 +1,13 @@
-/**
- * Created by vcernomschi on 4/20/16.
- */
+// THIS TEST WAS GENERATED AUTOMATICALLY ON Tue May 03 2016 14:57:54 GMT+0300 (EEST)
 
 'use strict';
 
 import chai from 'chai';
-import bootstrap from '../../../../../Backend/src/SayHello/CreateDb/bootstrap';
+import bootstrap from '../../../node_modules/SayHello/CreateDb/bootstrap';
 
-suite('Bootstraps', function() {
-
-  test('bootstrap exists in say-hello-create-db', function() {
-    chai.expect(typeof bootstrap).to.equal('object');
+// @todo: Add more advanced tests
+suite('Bootstraps', () => {
+  test(' bootstrap exists in say-hello-create-db module', () => {
+    chai.expect(bootstrap).to.be.an('object');
   });
 });
