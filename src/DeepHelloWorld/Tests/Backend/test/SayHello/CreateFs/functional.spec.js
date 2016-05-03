@@ -1,5 +1,3 @@
-// THIS TEST WAS GENERATED AUTOMATICALLY ON Tue May 03 2016 14:57:54 GMT+0300 (EEST)
-
 'use strict';
 
 import chai from 'chai';
@@ -7,7 +5,7 @@ import dir from 'node-dir';
 import path from 'path';
 import {Exec} from '../../../node_modules/deepify/lib.compiled/Helpers/Exec';
 
-let expect = chai.expect
+let expect = chai.expect;
 
 suite('Functional tests', () => {
 

@@ -1,13 +1,15 @@
-// THIS TEST WAS GENERATED AUTOMATICALLY ON Tue May 03 2016 14:57:54 GMT+0300 (EEST)
+// THIS TEST WAS GENERATED AUTOMATICALLY ON Tue May 03 2016 15:10:58 GMT+0300 (EEST)
 
 'use strict';
 
 import chai from 'chai';
 import bootstrap from '../../../node_modules/SayHello/CreateFs/bootstrap';
 
+let expect = chai.expect;
+
 // @todo: Add more advanced tests
 suite('Bootstraps', () => {
   test(' bootstrap exists in say-hello-create-fs module', () => {
-    chai.expect(bootstrap).to.be.an('object');
+    expect(bootstrap).to.be.an('object');
   });
 });
