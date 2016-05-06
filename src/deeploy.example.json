@@ -1,0 +1,11 @@
+{
+  "appIdentifier": "gdfg4556765dfgdf65756dfhgfjfkgjh554",
+  "appName": "My Custom Hello World App",
+  "env": "dev",
+  "awsAccountId": 123456789012,
+  "aws": {
+    "accessKeyId": "gfdgfd",
+    "secretAccessKey": "+gfdgfdgfdgfd/dEFpHV20ZxpQAkUqXwCSZBtZhCL",
+    "region": "us-west-2"
+  }
+}

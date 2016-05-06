@@ -162,7 +162,7 @@ build/Release
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 **/node_modules
-**/src/DeepNgRoot
+**/src/deep-root-vanilla
 **/compile
 
 # Debug log from npm
@@ -182,7 +182,4 @@ npm-debug.log
 
 # Coverage files
 **/coverage
-
-# Special for Trevor package.json
-/package.json
 

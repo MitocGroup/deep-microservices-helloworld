@@ -1,14 +1,13 @@
-/**
- * Created by vcernomschi on 4/20/16.
- */
+// THIS TEST WAS GENERATED AUTOMATICALLY ON Fri May 06 2016 11:43:32 GMT+0300 (EEST)
 
 'use strict';
 
 import chai from 'chai';
-import Handler from '../../../node_modules/say-hello-create-db/Handler';
+import Handler from '../../../node_modules/SayHello/CreateDb/Handler';
 
-suite('Handlers', function() {
-  test('Class Handler exists in say-hello-create-db', function() {
-    chai.expect(typeof Handler).to.equal('function');
+// @todo: Add more advanced tests
+suite('Handlers', () => {
+  test('Class Handler exists in say-hello-create-db module', () => {
+    chai.expect(Handler).to.be.an('function');
   });
 });
