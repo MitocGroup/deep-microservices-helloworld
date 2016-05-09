@@ -8,14 +8,14 @@ source $(dirname $0)/_head.sh
 ##############################
 ### Merge Coverage Results ###
 ##############################
-`which istanbul-combine` -d ${__COVERAGE_PATH} -r lcov -p both \
+istanbul-combine -d ${__COVERAGE_PATH} -r lcov -p both \
   ${__SRC_PATH}*/Tests/Frontend/coverage/report.json \
   ${__SRC_PATH}*/Tests/Backend/coverage/*.json
 
 ######################################
 ### Upload Coverage info to Codacy ###
 ######################################
-cat ${__COVERAGE_PATH}"/lcov.info" | `which codacy-coverage`
+cat ${__COVERAGE_PATH}"/lcov.info" | codacy-coverage
 
 #####################################################################
 ### Log top 20 file paths to be able see paths format from travis ###
