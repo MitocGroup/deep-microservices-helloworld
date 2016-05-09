@@ -4,6 +4,7 @@ node_js:
   - '4.3'
   - '4.4'
 cache:
+  edge: true
   directories:
     - $(npm root -g)
     - node_modules
