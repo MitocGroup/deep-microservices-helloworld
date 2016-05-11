@@ -1,39 +1,19 @@
 {
-  "name": "deep-hello-tests-backend",
+  "name": "deep-hello-world-backend-test",
   "version": "0.0.1",
-  "description": "DEEP Micro Services Hello World Backend",
-  "keywords": [
-    "DEEP",
-    "Digital Enterprise End-To-End Platform",
-    "Hello World"
-  ],
-  "homepage": "https://github.com/MitocGroup/deep-microservices-helloworld",
-  "bugs": {
-    "url": "https://github.com/MitocGroup/deep-microservices-helloworld/issues"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Mitoc Group",
-    "email": "hello@mitocgroup.com",
-    "website": "www.mitocgroup.com"
-  },
-  "contributors": [
-    {
-      "name": "DEEP Dev Team",
-      "email": "hello@deep.mg",
-      "website": "www.deep.mg"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/MitocGroup/deep-microservices-helloworld.git"
-  },
+  "description": "Description of deep-hello-world-backend-test",
   "scripts": {
-    "test": "babel-node `which istanbul` cover --report lcov _mocha -- --ui tdd --recursive --reporter spec test/**/*.spec.js"
+    "preinstall": "node-bin/preinstall.sh",
+    "install": "node-bin/install.sh",
+    "postinstall": "node-bin/postinstall.sh",
+    "test": "node-bin/test.sh"
   },
   "dependencies": {},
-  "devDependencies": {
-    "chai": "3.2.*",
-    "say-hello-world": "file:../../Backend/src/SayHello"
-  }
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MitocGroup/deep-microservices-skeleton.git"
+  },
+  "private": true,
+  "license": "MIT"
 }

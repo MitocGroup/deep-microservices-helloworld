@@ -15,9 +15,6 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'Tests/Frontend/vendor/github/angular/bower-angular@1.4.0/angular.js',
-      'Tests/Frontend/vendor/github/angular/bower-angular-mocks@1.4.5/angular-mocks.js',
-      'Tests/Frontend/vendor/github/angular-ui/ui-router@0.2.15/angular-ui-router.js',
       'Tests/Frontend/vendor/system.js',
       'Tests/Frontend/lib/DeepFramework.js',
       'Tests/Frontend/mock/lib/DeepFramework.js',
@@ -33,8 +30,8 @@ module.exports = function(config) {
         'npm:*': 'Tests/Frontend/vendor/npm/*.js',
       },
       loadFiles: [
-        'Tests/Frontend/angular/**/*.spec.js',
-        'Frontend/js/app/angular/index.js',
+        'Tests/Frontend/test/**/*.spec.js',
+        'Frontend/bootstrap.js',
       ],
       serveFiles: [
         'Frontend/**/*.js',
@@ -55,8 +52,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'Frontend/js/app/angular/**/*.js': ['coverage'],
-      'Tests/Frontend/angular/**/*.spec.js': ['babel'],
+      'Frontend/**/*.js': ['coverage'],
+      'Tests/Frontend/test/**/*.spec.js': ['babel'],
     },
 
     babelPreprocessor: {
