@@ -37,6 +37,5 @@
   },
   "devDependencies": {
   },
-  "preferGlobal": false,
-  "analyze": true
+  "private": true
 }
