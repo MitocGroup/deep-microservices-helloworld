@@ -164,6 +164,8 @@ build/Release
 **/node_modules
 **/src/deep-root-vanilla
 **/compile
+_vars.sh
+GitDiffWalker.js
 
 # Debug log from npm
 npm-debug.log
