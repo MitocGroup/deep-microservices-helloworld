@@ -73,7 +73,7 @@ command checks every 30 seconds if it's disabled and when successful, removes it
 Having questions related to deep-microservices-helloworld?
 
 - Ask questions: https://stackoverflow.com/questions/tagged/deep-framework
-- Chat with us: https://gitter.im/MitocGroup/deep-framework
+- Chat with us: https://mitocgroup.slack.com/messages/general
 - Send an email: feedback@deep.mg
 
 Interested in contributing to deep-microservices-helloworld?

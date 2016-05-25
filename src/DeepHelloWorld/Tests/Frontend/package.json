@@ -56,5 +56,5 @@
   },
   "dependencies": {},
   "devDependencies": {},
-  "private": false
+  "private": true
 }
