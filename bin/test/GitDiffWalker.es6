@@ -522,7 +522,9 @@ export class GitDiffWalker {
     if (this.isBackendTestsChanged || this.isBackendCodeChanged) {
       backendMicroAppPaths = this.getBackendMicroAppNames();
 
-      frontendMicroAppPaths = (this.isBackendCodeChanged && this._frontendMicroAppNames.length > 0) ?
+      frontendMicroAppPaths = (this.isBackendCodeChanged &&
+        typeof this._frontendMicroAppNames !== 'undefined' &&
+        this._frontendMicroAppNames.length > 0) ?
         GitDiffWalker.removeDuplicates(this.getFrontendMicroAppNames(), this.getBackendCodeMicroAppNames()) :
         this.getBackendCodeMicroAppNames();
 
