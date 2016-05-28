@@ -15,26 +15,26 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'Tests/Frontend/vendor/system.js',
-      'Tests/Frontend/lib/DeepFramework.js',
-      'Tests/Frontend/mock/lib/DeepFramework.js',
+      'tests/frontend/vendor/system.js',
+      'tests/frontend/lib/DeepFramework.js',
+      'tests/frontend/mock/lib/DeepFramework.js',
     ],
 
     // jspm configuration
     jspm: {
-      config: 'Tests/Frontend/config.test.js',
-      packages: 'Tests/Frontend/vendor/',
+      config: 'tests/frontend/config.test.js',
+      packages: 'tests/frontend/vendor/',
       useBundles: false,
       paths: {
-        'github:*': 'Tests/Frontend/vendor/github/*.js',
-        'npm:*': 'Tests/Frontend/vendor/npm/*.js',
+        'github:*': 'tests/frontend/vendor/github/*.js',
+        'npm:*': 'tests/frontend/vendor/npm/*.js',
       },
       loadFiles: [
-        'Tests/Frontend/test/**/*.spec.js',
-        'Frontend/bootstrap.js',
+        'tests/frontend/test/**/*.spec.js',
+        'frontend/bootstrap.js',
       ],
       serveFiles: [
-        'Frontend/**/*.js',
+        'frontend/**/*.js',
       ],
     },
 
@@ -52,8 +52,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'Frontend/**/*.js': ['coverage'],
-      'Tests/Frontend/test/**/*.spec.js': ['babel'],
+      'frontend/**/*.js': ['coverage'],
+      'tests/frontend/test/**/*.spec.js': ['babel'],
     },
 
     babelPreprocessor: {
@@ -89,11 +89,11 @@ module.exports = function(config) {
       reporters: [
         {
           type: 'json',
-          dir: 'Tests/Frontend/coverage/',
+          dir: 'tests/frontend/coverage/',
         },
         {
           type: 'lcov',
-          dir: 'Tests/Frontend/coverage/',
+          dir: 'tests/frontend/coverage/',
         },
       ],
     },

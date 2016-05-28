@@ -4,7 +4,7 @@
 
 'use strict';
 
-import bootstrap from '../../../Frontend/bootstrap';
+import bootstrap from '../../../frontend/bootstrap';
 
 describe('Bootstrap', function() {
   it('Should load bootstrap', function() {

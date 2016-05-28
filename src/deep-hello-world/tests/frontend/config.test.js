@@ -8,8 +8,8 @@ System.config({
     ],
   },
   paths: {
-    'github:*': 'Frontend/vendor/github/*',
-    'npm:*': 'Frontend/vendor/npm/*',
+    'github:*': 'frontend/vendor/github/*',
+    'npm:*': 'frontend/vendor/npm/*',
   },
 
   map: {

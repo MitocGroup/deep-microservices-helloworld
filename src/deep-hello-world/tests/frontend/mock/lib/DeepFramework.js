@@ -94,10 +94,10 @@ DeepFramework.Kernel.load({
         ],
         dependencies: {},
         autoload: {
-          frontend: 'Frontend',
-          backend: 'Backend',
-          docs: 'Docs',
-          models: 'Models',
+          frontend: 'frontend',
+          backend: 'backend',
+          docs: 'docs',
+          models: 'data/models',
         },
         frontendEngine: [
           'angular',
@@ -111,15 +111,15 @@ DeepFramework.Kernel.load({
               runtime: 'nodejs',
             },
           },
-          'sample-say-hello': '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/HelloWorld/Backend/src/SayHello',
+          'sample-say-hello': '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/deep-hello-world/backend/src/say-hello',
         },
       },
       isRoot: true,
       autoload: {
-        frontend: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/HelloWorld/Frontend',
-        backend: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/HelloWorld/Backend',
-        docs: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/HelloWorld/Docs',
-        models: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/HelloWorld/Models',
+        frontend: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/deep-hello-world/frontend',
+        backend: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/deep-hello-world/backend',
+        docs: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/deep-hello-world/docs',
+        models: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/deep-hello-world/data/models',
       },
       lambdas: {
         'sample-say-hello': {
