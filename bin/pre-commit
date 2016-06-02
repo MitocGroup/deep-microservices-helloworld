@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-files=$(git diff --cached --name-only --diff-filter=ACM | egrep "^lib/(.)+/lib/(.)+\.js$|^microservice/(.)+/Backend/src/(.)+\.es6$|^src/(.)+/lib/(.)+\.js$")
+files=$(git diff --cached --name-only --diff-filter=ACM | egrep "^lib/(.)+/lib/(.)+\.js$|^microservice/(.)+/backend/src/(.)+\.es6$|^src/(.)+/lib/(.)+\.js$")
 
 if [ "$files" = "" ]; then
     exit 0
