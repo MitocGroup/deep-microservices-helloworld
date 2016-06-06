@@ -1,0 +1,41 @@
+{
+  "name": "say-hello-create-db",
+  "version": "0.0.1",
+  "description": "Lambda that says hello to the world",
+  "keywords": [
+    "DEEP",
+    "Digital Enterprise End-To-End Platform",
+    "Hello World"
+  ],
+  "homepage": "https://github.com/MitocGroup/deep-microservices-helloworld",
+  "bugs": {
+    "url": "https://github.com/MitocGroup/deep-microservices-helloworld/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Mitoc Group",
+    "email": "hello@mitocgroup.com",
+    "website": "www.mitocgroup.com"
+  },
+  "contributors": [
+    {
+      "name": "DEEP Dev Team",
+      "email": "hello@deep.mg",
+      "website": "www.deep.mg"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MitocGroup/deep-microservices-helloworld.git"
+  },
+  "scripts": {
+    "postinstall": "npm run compile",
+    "compile": "deepify compile es6 `pwd`"
+  },
+  "dependencies": {
+    "deep-framework": "^1.x.x"
+  },
+  "devDependencies": {
+  },
+  "private": true
+}

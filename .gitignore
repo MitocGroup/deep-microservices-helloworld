@@ -164,21 +164,24 @@ build/Release
 **/node_modules
 **/src/deep-root-vanilla
 **/compile
+_vars.sh
+GitDiffWalker.js
 
 # Debug log from npm
 npm-debug.log
 
 # Transpiled Lambdas code
-**/Backend/src/**/*.js
+**/backend/src/**/*.js
+**/backend/src/**/_async_config.json
 
 # Lambda archives and checksums
-**/Backend/src/**/*.zip
-**/Backend/src/**/*.sfv
-**/Backend/src/**/_config.json
+**/backend/src/**/*.zip
+**/backend/src/**/*.sfv
+**/backend/src/**/_config.json
 
 # Frontend dependencies
 **/js/vendor/
-**/Frontend/vendor/
+**/frontend/vendor/
 
 # Coverage files
 **/coverage

@@ -1,0 +1,25 @@
+{
+  "say-hello": {
+    "create-msg": {
+      "description": "Says hello to the world",
+      "type": "lambda",
+      "validationSchema": "name-data",
+      "methods": ["POST"],
+      "source": "src/say-hello/create-msg"
+    },
+    "create-fs": {
+      "description": "Says hello to the world",
+      "type": "lambda",
+      "validationSchema": "name-data",
+      "methods": ["POST"],
+      "source": "src/say-hello/create-fs"
+    },
+    "create-db": {
+      "description": "Says hello to the world",
+      "type": "lambda",
+      "validationSchema": "name-data",
+      "methods": ["POST"],
+      "source": "src/say-hello/create-db"
+    }
+  }
+}
