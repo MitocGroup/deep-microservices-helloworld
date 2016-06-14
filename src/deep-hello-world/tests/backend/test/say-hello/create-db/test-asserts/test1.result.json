@@ -1,9 +1,0 @@
-{
-  "_ignore": [
-    "db.Id",
-    "db.createdAt"
-  ],
-  "db": {
-    "Name": "Input Value"
-  }
-}

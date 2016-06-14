@@ -99,7 +99,6 @@ suite('Functional tests', () => {
       }
 
       chai.expect(actualResult).to.eql(expectedResult, `for payload from: ${inputEventsFilesArray[i]}`);
-
     }
 
   });

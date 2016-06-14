@@ -1,9 +1,0 @@
-{
-  "_ignore": [
-    "errorMessage",
-    "errorStack",
-    "validationErrors"
-  ],
-  "errorType": "ValidationError",
-  "_deep_error_code_": 400
-}
