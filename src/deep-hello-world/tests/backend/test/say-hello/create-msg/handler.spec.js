@@ -1,13 +1,13 @@
 'use strict';
 
 import chai from 'chai';
-import Handler from '../../../../../backend/src/say-hello/create-msg/Handler';
+import Handler from './../../../../../backend/src/say-hello/create-msg/Handler';
 import Kernel from
-  '../../../../../backend/src/say-hello/create-msg/node_modules/deep-framework/node_modules/deep-kernel';
+  './../../../../../backend/src/say-hello/create-msg/node_modules/deep-framework/node_modules/deep-kernel';
 import Resource from
-  '../../../../../backend/src/say-hello/create-msg/node_modules/deep-framework/node_modules/deep-resource';
+  './../../../../../backend/src/say-hello/create-msg/node_modules/deep-framework/node_modules/deep-resource';
 import Log from
-  '../../../../../backend/src/say-hello/create-msg/node_modules/deep-framework/node_modules/deep-log';
+  './../../../../../backend/src/say-hello/create-msg/node_modules/deep-framework/node_modules/deep-log';
 import KernelFactory from './../../common/KernelFactory';
 
 suite('Handlers', () => {
