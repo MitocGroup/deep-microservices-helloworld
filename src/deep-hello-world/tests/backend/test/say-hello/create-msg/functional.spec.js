@@ -86,6 +86,8 @@ suite('Functional tests', () => {
       if (expectedResult._ignore) {
 
         var ignoreKeys = (result, ignoreKeysArray) => {
+          /*jshint evil:true */
+
           for(let ignoreKey of ignoreKeysArray) {
             eval(`delete result.${ignoreKey}`);
           }
