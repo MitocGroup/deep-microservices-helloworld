@@ -3,7 +3,7 @@
 'use strict';
 
 import chai from 'chai';
-import bootstrap from '../../../node_modules/say-hello/create-msg/bootstrap';
+import bootstrap from '../../../../../backend/src/say-hello/create-msg/bootstrap';
 
 // @todo: Add more advanced tests
 suite('Bootstraps', () => {

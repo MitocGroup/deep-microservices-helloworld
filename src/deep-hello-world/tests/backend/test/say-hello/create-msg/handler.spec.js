@@ -3,7 +3,7 @@
 'use strict';
 
 import chai from 'chai';
-import Handler from '../../../node_modules/say-hello/create-msg/Handler';
+import Handler from '../../../../../backend/src/say-hello/create-msg/Handler';
 
 // @todo: Add more advanced tests
 suite('Handlers', () => {
