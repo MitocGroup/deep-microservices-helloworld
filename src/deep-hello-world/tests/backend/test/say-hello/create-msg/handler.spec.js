@@ -2,12 +2,9 @@
 
 import chai from 'chai';
 import Handler from './../../../../../backend/src/say-hello/create-msg/Handler';
-import Kernel from
-  './../../../../../backend/src/say-hello/create-msg/node_modules/deep-framework/node_modules/deep-kernel';
-import Resource from
-  './../../../../../backend/src/say-hello/create-msg/node_modules/deep-framework/node_modules/deep-resource';
-import Log from
-  './../../../../../backend/src/say-hello/create-msg/node_modules/deep-framework/node_modules/deep-log';
+import Kernel from './../../../node_modules/deep-framework/node_modules/deep-kernel';
+import Resource from './../../../node_modules/deep-framework/node_modules/deep-resource';
+import Log from './../../../node_modules/deep-framework/node_modules/deep-log';
 import KernelFactory from './../../common/KernelFactory';
 
 suite('Handlers', () => {
