@@ -71,5 +71,4 @@ suite('Handlers', () => {
 
     chai.expect(handler.contextSent).to.equal(true);
   });
-
 });
