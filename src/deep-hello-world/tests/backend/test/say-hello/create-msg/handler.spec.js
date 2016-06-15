@@ -1,10 +1,10 @@
 'use strict';
 
 import chai from 'chai';
-import Handler from './../../../../../backend/src/say-hello/create-msg/Handler';
-import Kernel from './../../../node_modules/deep-framework/node_modules/deep-kernel';
-import Resource from './../../../node_modules/deep-framework/node_modules/deep-resource';
-import Log from './../../../node_modules/deep-framework/node_modules/deep-log';
+import Handler from '../../../../../backend/src/say-hello/create-msg/Handler';
+import Kernel from '../../../node_modules/deep-framework/node_modules/deep-kernel';
+import Resource from '../../../node_modules/deep-framework/node_modules/deep-resource';
+import Log from '../../../node_modules/deep-framework/node_modules/deep-log';
 import KernelFactory from './../../common/KernelFactory';
 
 suite('Handlers', () => {
@@ -16,11 +16,11 @@ suite('Handlers', () => {
 
   test('Load Kernel by using Kernel.load()', (done) => {
     let callback = (backendKernel) => {
+      kernelInstance = backendKernel;
+
       chai.assert.instanceOf(
         backendKernel, Kernel, 'backendKernel is an instance of Kernel'
       );
-
-      kernelInstance = backendKernel;
 
       // complete the async
       done();

@@ -1,7 +1,7 @@
 'use strict';
 
 import backendConfig from './backend-cfg-json';
-import Kernel from '../../../../backend/src/say-hello/create-msg/node_modules/deep-framework/node_modules/deep-kernel';
+import Kernel from '../../node_modules/deep-framework/node_modules/deep-kernel';
 
 export default {
   /**
