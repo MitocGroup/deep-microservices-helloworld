@@ -1,9 +1,9 @@
-// THIS TEST WAS GENERATED AUTOMATICALLY ON Mon Jun 13 2016 14:21:13 GMT+0300 (EEST)
+// THIS TEST WAS GENERATED AUTOMATICALLY ON Tue Jun 14 2016 18:31:05 GMT+0300 (EEST)
 
 'use strict';
 
 import chai from 'chai';
-import Handler from '../../../node_modules/say-hello/create-db/Handler';
+import Handler from '../../../../../backend/src/say-hello/create-db/Handler';
 
 // @todo: Add more advanced tests
 suite('Handlers', () => {
