@@ -17,14 +17,14 @@ export default {
    */
   create: function (callback) {
     let services = {
-        Validation: Validation,
-        Security: Security,
-        Resource: Resource,
-        Cache: Cache,
-        FS: FS,
-        DB: DB,
-        Log: Log,
-      };
+      Validation: Validation,
+      Security: Security,
+      Resource: Resource,
+      Cache: Cache,
+      FS: FS,
+      DB: DB,
+      Log: Log,
+    };
 
     let backendInstance = new Kernel(services, Kernel.BACKEND_CONTEXT);
 
