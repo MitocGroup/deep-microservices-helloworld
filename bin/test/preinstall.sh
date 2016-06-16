@@ -60,6 +60,7 @@ if [ "${__E2E_WITH_PUBLIC_REPO}" = "${E2E_TESTING}" ] || [ "${__E2E_WITH_PRIVATE
   ###############################################################
   ### Install locally, protractor doesn't find babel globally ###
   ###############################################################
+  (npm list -g babel-register --depth=0 || npm install -g babel-register) &&\
   (if [ ! -d "node_modules/babel-cli" ]; then npm link babel-cli; fi) &&\
   (if [ ! -d "node_modules/babel-preset-es2015" ]; then npm link babel-preset-es2015; fi) &&\
   (if [ ! -d "node_modules/babel-plugin-add-module-exports" ]; then npm install babel-plugin-add-module-exports; fi) &&\
