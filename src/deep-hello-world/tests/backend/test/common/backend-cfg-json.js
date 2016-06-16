@@ -33,7 +33,7 @@ export default {
             'source': {
               'api': '/deep-hello-world/say-hello/create-msg',
               'original': 'arn:aws:lambda:::function:deep-hello-world-say-hello-create-msg',
-              '_localPath': '/Library/WebServer/Documents/NEW/deep-microservices-helloworld/src/deep-hello-world/backend/src/say-hello/create-msg/bootstrap.js'
+              '_localPath': './src/deep-hello-world/backend/src/say-hello/create-msg/bootstrap.js'
             }
           },
           'create-fs': {
@@ -52,7 +52,7 @@ export default {
             'source': {
               'api': '/deep-hello-world/say-hello/create-fs',
               'original': 'arn:aws:lambda:::function:deep-hello-world-say-hello-create-fs',
-              '_localPath': '/Library/WebServer/Documents/NEW/deep-microservices-helloworld/src/deep-hello-world/backend/src/say-hello/create-fs/bootstrap.js'
+              '_localPath': './src/deep-hello-world/backend/src/say-hello/create-fs/bootstrap.js'
             }
           },
           'create-db': {
@@ -71,7 +71,7 @@ export default {
             'source': {
               'api': '/deep-hello-world/say-hello/create-db',
               'original': 'arn:aws:lambda:::function:deep-hello-world-say-hello-create-db',
-              '_localPath': '/Library/WebServer/Documents/NEW/deep-microservices-helloworld/src/deep-hello-world/backend/src/say-hello/create-db/bootstrap.js'
+              '_localPath': './src/deep-hello-world/backend/src/say-hello/create-db/bootstrap.js'
             }
           }
         }
@@ -97,7 +97,7 @@ export default {
             'source': {
               'api': null,
               'original': 'arn:aws:lambda:::function:deep-root-vanilla-async-config-dump',
-              '_localPath': '/Library/WebServer/Documents/NEW/deep-microservices-helloworld/src/deep-root-vanilla/backend/src/async-config/dump/bootstrap.js'
+              '_localPath': './src/deep-root-vanilla/backend/src/async-config/dump/bootstrap.js'
             }
           }
         },
@@ -117,7 +117,7 @@ export default {
             'source': {
               'api': null,
               'original': 'arn:aws:lambda:::function:deep-root-vanilla-scheduler-rule',
-              '_localPath': '/Library/WebServer/Documents/NEW/deep-microservices-helloworld/src/deep-root-vanilla/backend/src/scheduler/rule/bootstrap.js'
+              '_localPath': './src/deep-root-vanilla/backend/src/scheduler/rule/bootstrap.js'
             }
           }
         },
@@ -137,7 +137,7 @@ export default {
             'source': {
               'api': null,
               'original': 'arn:aws:lambda:::function:deep-root-vanilla-ddb-eventual-consistency-listen-queues',
-              '_localPath': '/Library/WebServer/Documents/NEW/deep-microservices-helloworld/src/deep-root-vanilla/backend/src/ddb-eventual-consistency/listen-queues/bootstrap.js'
+              '_localPath': './src/deep-root-vanilla/backend/src/ddb-eventual-consistency/listen-queues/bootstrap.js'
             }
           },
           'pool-queue': {
@@ -155,7 +155,7 @@ export default {
             'source': {
               'api': null,
               'original': 'arn:aws:lambda:::function:deep-root-vanilla-ddb-eventual-consistency-pool-queue',
-              '_localPath': '/Library/WebServer/Documents/NEW/deep-microservices-helloworld/src/deep-root-vanilla/backend/src/ddb-eventual-consistency/pool-queue/bootstrap.js'
+              '_localPath': './src/deep-root-vanilla/backend/src/ddb-eventual-consistency/pool-queue/bootstrap.js'
             }
           }
         }
@@ -210,5 +210,5 @@ export default {
   },
   'cacheDsn': '',
   'name': 'deep-hello-world-say-hello-create-db',
-  'path': '/Library/WebServer/Documents/NEW/deep-microservices-helloworld/src/deep-hello-world/backend/src/say-hello/create-db/bootstrap.js'
+  'path': './src/deep-hello-world/backend/src/say-hello/create-db/bootstrap.js'
 };
