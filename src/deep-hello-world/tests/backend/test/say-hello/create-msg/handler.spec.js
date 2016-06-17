@@ -1,5 +1,3 @@
-// THIS TEST WAS GENERATED AUTOMATICALLY ON Thu Jun 16 2016 17:28:52 GMT+0300 (EEST)
-
 'use strict';
 
 import chai from 'chai';
@@ -7,7 +5,6 @@ import Handler from '../../../../../backend/src/say-hello/create-msg/Handler';
 import Kernel from '../../../node_modules/deep-framework/node_modules/deep-kernel';
 import KernelFactory from '../../common/KernelFactory';
 
-// @todo: Add more advanced tests
 suite('Handlers', () => {
   let handler, kernelInstance;
 
