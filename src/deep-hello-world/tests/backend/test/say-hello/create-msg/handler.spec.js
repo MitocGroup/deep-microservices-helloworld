@@ -3,9 +3,7 @@
 import chai from 'chai';
 import Handler from '../../../../../backend/src/say-hello/create-msg/Handler';
 import Kernel from '../../../node_modules/deep-framework/node_modules/deep-kernel';
-import Resource from '../../../node_modules/deep-framework/node_modules/deep-resource';
-import Log from '../../../node_modules/deep-framework/node_modules/deep-log';
-import KernelFactory from './../../common/KernelFactory';
+import KernelFactory from '../../common/KernelFactory';
 
 suite('Handlers', () => {
   let handler, kernelInstance;
@@ -26,10 +24,7 @@ suite('Handlers', () => {
       done();
     };
 
-    KernelFactory.create({
-      Resource: Resource,
-      Log: Log,
-    }, callback);
+    KernelFactory.create(callback);
   });
 
   test('Check Handler constructor', () => {

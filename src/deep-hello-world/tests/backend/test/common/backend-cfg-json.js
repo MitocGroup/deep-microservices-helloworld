@@ -1,97 +1,75 @@
 export default {
-  env: 'dev',
-  deployId: '65ab34689468924b655ae66fcdf31eae',
-  awsRegion: 'us-west-2',
-  models: [
+  'env': 'dev',
+  'deployId': 'a44dd54d',
+  'awsRegion': 'us-west-2',
+  'models': [
     {
-      Name: {
-        Name: 'string',
-        Id: 'timeUUID',
-      },
-    },
+      'name': {
+        'Name': 'string'
+      }
+    }
   ],
-  identityPoolId: 'us-east-1:44hgf876-a2v2-465a-877v-12fd264525ef',
-  identityProviders: {
-    'www.amazon.com': 'amzn1.application.5g5k2jb86379368kjh5b23kj5hb',
+  'identityPoolId': 'us-east-1:xxxxxxxx-xxxx-xxxx-xxxx-xx0123456789',
+  'identityProviders': '',
+  'microservices': {
+    'deep-hello-world': {
+      'isRoot': false,
+      'parameters': {},
+      'resources': {}
+    },
+    'deep-root-vanilla': {
+      'isRoot': true,
+      'parameters': {},
+      'resources': {}
+    }
   },
-  microservices: {
-    'hello.world.example': {
-      isRoot: false,
-      parameters: {},
-      resources: {
-        sample: {
-          'say-hello': {
-            type: 'lambda',
-            methods: [
-              'POST',
-            ],
-            forceUserIdentity: true,
-            validationSchema: 'Sample',
-            region: 'us-west-2',
-            source: {
-              api: 'https://1zf47jpvxd.execute-api.us-west-2.amazonaws.com/dev/hello-world-example/sample/say-hello',
-              original: 'arn:aws:lambda:us-west-2:389615756922:function:DeepDevSampleSayHello64232f3705a',
-            },
-          },
-          'say-bye': {
-            type: 'lambda',
-            methods: [
-              'GET',
-            ],
-            forceUserIdentity: true,
-            region: 'us-west-2',
-            source: {
-              api: 'https://6jh99kuklk.execute-api.us-west-2.amazonaws.com/dev/hello-world-example/sample/say-bye',
-              original: 'arn:aws:lambda:us-west-2:389615756922:function:DeepDevSampleSayBye64232f3705a',
-            },
-          },
-          'say-test': {
-            type: 'external',
-            methods: [
-              'GET',
-            ],
-            forceUserIdentity: true,
-            region: 'us-west-2',
-            source: {
-              api: 'https://6jh99kuklk.execute-api.us-west-2.amazonaws.com/dev/hello-world-example/sample/say-test',
-              original: 'http://petstore.swagger.io/v2/store/inventory',
-            },
-          },
-        },
-      },
+  'globals': {
+    'favicon': '@deep-root-vanilla:img/favicon.ico',
+    'pageLoader': {
+      'src': '@deep-root-vanilla:img/loader.gif',
+      'alt': 'Loading...'
     },
-    'deep.ng.root': {
-      isRoot: true,
-      parameters: {},
-      resources: {},
-    },
+    'engine': {
+      'ngRewrite': '/'
+    }
   },
-  globals: {
-    userProviderEndpoint: '@deep.auth:user-retrieve',
-    security: {
-      identityProviders: {
-        'www.amazon.com': 'amzn1.application.3b5k2jb65432352gfd5b23kj5hb',
-      },
+  'searchDomains': {},
+  'validationSchemas': [
+    'name-data'
+  ],
+  'modelsSettings': [
+    {
+      'name': {
+        'readCapacity': 1,
+        'writeCapacity': 1,
+        'maxReadCapacity': 10000,
+        'maxWriteCapacity': 10000
+      }
+    }
+  ],
+  'forceUserIdentity': false,
+  'microserviceIdentifier': 'deep-hello-world',
+  'awsAccountId': 123456789123,
+  'appIdentifier': 'gfhfgdhfghgjgh7687687fghgfhgf',
+  'timestamp': 1465996738254,
+  'buckets': {
+    'temp': {
+      'name': 'fdgfd56765gfhjgj768768ghjjhgjhg898-temp'
     },
+    'public': {
+      'name': 'fdgfd56765gfhjgj768768ghjjhgjhg898-public'
+    },
+    'private': {
+      'name': 'fdgfd56765gfhjgj768768ghjjhgjhg898-private'
+    },
+    'shared': {
+      'name': 'fdgfd56765gfhjgj768768ghjjhgjhg898-shared'
+    }
   },
-  microserviceIdentifier: 'hello.world.example',
-  awsAccountId: 389615756922,
-  appIdentifier: '45asd88620d1e4eea543',
-  timestamp: 1445867176360,
-  buckets: {
-    temp: {
-      name: 'deep.dev.temp.32f3705a',
-    },
-    public: {
-      website: 'deep.dev.public.32f3705a.s3-website-us-west-2.amazonaws.com',
-      name: 'deep.dev.public.32f3705a',
-    },
-    system: {
-      name: 'deep.dev.system.32f3705a',
-    },
+  'tablesNames': {
+    'name': 'DeepDevName4a7dbaed'
   },
-  tablesNames: {
-    Name: 'DeepDevName32f3705a',
-  },
-  validationSchemas: [],
+  'cacheDsn': '',
+  'name': 'deep-hello-world-say-hello-create-db',
+  'path': './src/deep-hello-world/backend/src/say-hello/create-db/bootstrap.js'
 };

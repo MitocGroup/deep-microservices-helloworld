@@ -72,7 +72,7 @@ suite('Functional tests', () => {
 
     for (i = 0; i < inputEventsArray.length; i++) {
       let eventStr = '\'' + inputEventsArray[i].replace(/(\r\n|\n|\r)/gm, '') + '\'';
-      let cmd = `deepify lambda ../../../../../backend/src/say-hello/create-db/ -e=${eventStr} -p`;
+      let cmd = `deepify lambda ../../../../../backend/src/say-hello/create-db -e=${eventStr} -p`;
       let runLambdaCmd = new Exec(cmd);
 
       runLambdaCmd.cwd = __dirname;
