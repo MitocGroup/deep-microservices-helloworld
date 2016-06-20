@@ -19,7 +19,7 @@
     xhttp.send();
   }
 
-  loadAsset('@deep-hello-world:view/hello.html', function(plainHtml) {
+  loadAsset('@deep-helloworld:view/hello.html', function(plainHtml) {
     var body = document.body;
     body.innerHTML = plainHtml;
 
@@ -32,7 +32,7 @@
 
       var payload = {Name: nameInput.value};
       var checkedResource = body.querySelector('input[name="resource"]:checked');
-      var resourceIdentifier = '@deep-hello-world:say-hello:create-' + checkedResource.value;
+      var resourceIdentifier = '@deep-helloworld:say-hello:create-' + checkedResource.value;
 
       security.anonymousLogin(function() {
         resource.get(resourceIdentifier).request(payload).send(function(response) {
