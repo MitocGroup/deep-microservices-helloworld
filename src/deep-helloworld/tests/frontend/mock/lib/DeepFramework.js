@@ -16,8 +16,8 @@ DeepFramework.Kernel.load({
     },
   },
   microservices: {
-    'deep-hello-world': {
-      identifier: 'deep-hello-world',
+    'deep-helloworld': {
+      identifier: 'deep-helloworld',
       localPath: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/HelloWorld',
       resources: {
         sample: {
@@ -111,15 +111,15 @@ DeepFramework.Kernel.load({
               runtime: 'nodejs',
             },
           },
-          'sample-say-hello': '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/deep-hello-world/backend/src/say-hello',
+          'sample-say-hello': '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/deep-helloworld/backend/src/say-hello',
         },
       },
       isRoot: true,
       autoload: {
-        frontend: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/deep-hello-world/frontend',
-        backend: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/deep-hello-world/backend',
-        docs: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/deep-hello-world/docs',
-        models: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/deep-hello-world/data/models',
+        frontend: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/deep-helloworld/frontend',
+        backend: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/deep-helloworld/backend',
+        docs: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/deep-helloworld/docs',
+        models: '/var/folders/td/l6f2jrdj25x9dw6nxx3_4khc0000gn/T/hello_api_1444009917471/deep-helloworld/data/models',
       },
       lambdas: {
         'sample-say-hello': {

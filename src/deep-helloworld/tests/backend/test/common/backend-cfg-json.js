@@ -12,7 +12,7 @@ export default {
   'identityPoolId': 'us-east-1:xxxxxxxx-xxxx-xxxx-xxxx-xx0123456789',
   'identityProviders': '',
   'microservices': {
-    'deep-hello-world': {
+    'deep-helloworld': {
       'isRoot': false,
       'parameters': {},
       'resources': {}
@@ -48,7 +48,7 @@ export default {
     }
   ],
   'forceUserIdentity': false,
-  'microserviceIdentifier': 'deep-hello-world',
+  'microserviceIdentifier': 'deep-helloworld',
   'awsAccountId': 123456789123,
   'appIdentifier': 'gfhfgdhfghgjgh7687687fghgfhgf',
   'timestamp': 1465996738254,
@@ -70,6 +70,6 @@ export default {
     'name': 'DeepDevName4a7dbaed'
   },
   'cacheDsn': '',
-  'name': 'deep-hello-world-say-hello-create-db',
-  'path': './src/deep-hello-world/backend/src/say-hello/create-db/bootstrap.js'
+  'name': 'deep-helloworld-say-hello-create-db',
+  'path': './src/deep-helloworld/backend/src/say-hello/create-db/bootstrap.js'
 };
