@@ -186,3 +186,7 @@ npm-debug.log
 # Coverage files
 **/coverage
 
+# Provisioning Config files
+*.provisioning.json
+*.provisioning.json.bck
+
