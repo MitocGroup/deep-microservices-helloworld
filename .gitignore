@@ -164,8 +164,6 @@ build/Release
 **/node_modules
 **/src/deep-root-vanilla
 **/compile
-_vars.sh
-GitDiffWalker.js
 
 # Debug log from npm
 npm-debug.log
@@ -183,6 +181,17 @@ npm-debug.log
 **/js/vendor/
 **/frontend/vendor/
 
-# Coverage files
-**/coverage
+# Tests resources
+GitDiffWalker.js
+S3CoverageSynchronizer.js
+CoverageComparator.js
+CoverageManager.js
+GitHubMsgPublisher.js
+_vars.sh
+/package.json
+**/.sass-cache/
+**/coverage/
+**/coverages/
 
+shared-lib
+!backend/shared-lib

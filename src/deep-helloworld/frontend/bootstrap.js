@@ -11,7 +11,9 @@
 
     xhttp.onreadystatechange = function () {
       if (xhttp.readyState === 4 && xhttp.status === 200) {
-        callback(xhttp.responseText);
+        callback(xhttp.responseText)
+
+        return;
       }
     };
 
@@ -41,4 +43,4 @@
       });
     });
   });
-})(DeepFramework);
+}(DeepFramework));
