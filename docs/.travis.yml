@@ -3,7 +3,7 @@ env:
     # Disable interactive user mode ###
     - DEEP_NO_INTERACTION=1
     # Set type of E2E tests. Public, private or none
-    - E2E_TESTING=public
+    - E2E_TESTING=none
     # To enable run full CI build for specified branches
     - MAJOR_VERSIONS=master
     # JSPM_GITHUB_AUTH_TOKEN=[secured]
