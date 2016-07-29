@@ -2,7 +2,7 @@
  * Created by AlexanderC on 9/15/15.
  */
 
-/* eslint no-unused-vars: 1 */
+/* eslint no-unused-vars: 0 */
 
 'use strict';
 
