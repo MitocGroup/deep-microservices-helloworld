@@ -3,6 +3,7 @@
  */
 
 /* eslint no-unused-vars: 0 */
+/* eslint no-extra-bind: 0 */
 
 'use strict';
 
@@ -32,5 +33,5 @@ var exports = module.exports = function(callback) {
     }
 
     callback();
-  });
+  }.bind(this));
 };
