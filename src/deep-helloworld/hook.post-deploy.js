@@ -32,7 +32,5 @@ var exports = module.exports = function(callback) {
     }
 
     callback();
-
-    return;
   });
 };
