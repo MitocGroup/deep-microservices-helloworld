@@ -2,6 +2,9 @@
  * Created by AlexanderC on 9/15/15.
  */
 
+/* eslint no-unused-vars: 0 */
+/* eslint no-extra-bind: 0 */
+
 'use strict';
 
 var exports = module.exports = function(callback) {
