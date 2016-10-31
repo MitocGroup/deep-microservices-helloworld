@@ -1,4 +1,8 @@
 env:
+  # Parallelize backend and fronted test
+  matrix:
+    - TEST_SUITE=backend
+    - TEST_SUITE=frontend
   global:
     # Disable interactive user mode ###
     - DEEP_NO_INTERACTION=1
