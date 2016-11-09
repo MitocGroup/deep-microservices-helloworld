@@ -2,7 +2,7 @@ language: node_js
 sudo: required
 node_js:
   - '4.3'
-  - '7.0'
+  - '7.1'
 cache:
   edge: true
   directories:
@@ -23,9 +23,6 @@ after_success:
 after_script:
   - npm run remove-coverage
 env:
-  matrix:
-    - TEST_SUITE=backend
-    - TEST_SUITE=frontend
   global:
     - DEEP_NO_INTERACTION=1
     - E2E_TESTING=none
@@ -46,6 +43,9 @@ env:
         G07gxx4aVetEW1ky95esaKbDaCgb5jrDzErPphXv/OmSz4Cb1I+Y+YsMMx5JD4WzdEaMo7DyssQNSlmnx3B3Z1ZzZFLbb0mwcoRgR0A/5rdnYSUP+Hwj63ky9HVr5LKAGkMhZCWlOSct2QPeFwr1qnVWyh37QiEYNRClV4J0iuo06RMRfWqvsjsgPkSc6HGeOc7eegyesq/W/89NvblCIsIIGAQ6clnVvqc4tBgY5+k03Mp40qhwKIGE2UB/vNpx1SQt2nC2so3sEq+3Htq9sZGv37DKzUtPTlQ8PQ+FXl8jr045rqsNsr+Vo9dYVQReuJ0uyUz14Ck3/qC9KP/2uSjq/oVxeWNSwXzk2kz+caYILhUrZAMJb0zt5UU0w/ocFd5C/GErfkyq8/mPrQRqn6A2LDtQ5wDuqVMcoVFU4x8WBe9Ju4mivpeaciiBeqF3uLxJlp6t+P/bjNEbCGEm6eSJxLziuO4cqiwwtS+GBZYZQ3EI5VUP6KnFFQyuUdGFO/SIALUcXehYUgXAWtetSDDyHbvZD3wD7RBSGkNTdmIb/iBDYnDPixiez9OBVgmck/00ke15M3sLYzcsox+taeJfFBQEkWeiGzwyqjEOTI/m9tgB5/2XML5ypmakEqk+OmmgiOzSKHPlHXmJM09wVrEP6L6PtTERcKIPsunQs0c=
     - secure: 
         XSjeaw3Kd10HU+P8m1LYEa9yHZ5C0JtmFzcCJ2UkM6VkIuvgxlGGuaREI6FW6bBuq2m1y4aQtsHLlmbDNAYcGVuCErFzHYtIxemYwYDnCA9M8c7XpfxHkP/rZZWIDflNp75DldlSNZ+TsjUtz5nNdXfWfqYPw5NgA1QnIXqdL8w7+qUXBfsUBYJvNSEi9OfTryXnHVk7J0dRckiKt2CHIaqPUyYiOAzByVBjaD2qrli0vLFIco0vtbG99X0ys6BlBzMR3Cs38lvBPXnv+078qiM5ipE9lCrmE38Pi05HI/iO+jgYw0cwHzgnQfBe3zwZbiUPBY93BD4CxpFoBT/gPz86SWoniii/lMNtcK6ruQBV8frDupsxERY2HQkkRPlh7CGd2jExgbw4L8D8V8sC5akGchug+gpdsoVdrQPfxmeyM80nLtCHL15MUp79yhHxYSBPLoMNSK7DRpYR6y2paK1u+NhBxQva/Z87IqrkBE2iNfw6jGFT8iJYuERiznM+1nP7ABI9u6U78teyoq+TulIIO9BAI97vnKjUoSH79go036VHJqX04BU+4zW/NxpAOGcWwffhWglIy69XUQvhdpOFqTR1ks+i5gsTk/j0/R6UsoUZVkfSz710rGEyEYqWmnnoQOBtBB+hezpTRIXPE/pYFI7jytU5rceY3BLIdig=
+  matrix:
+    - TEST_SUITE=backend
+    - TEST_SUITE=frontend
 notifications:
   slack:
     secure: 
