@@ -2,6 +2,7 @@ DeepFramework.Kernel.load({
   appIdentifier: 'deep.api.test.app_1',
   env: 'test',
   awsAccountId: 389617777922,
+  apiVersion: 'v1',
   aws: {
     accessKeyId: 'ewrwerwerewrwJJJJdqd', secretAccessKey: 'asdasdasdadasdadadad', region: 'us-west-2',
   },
