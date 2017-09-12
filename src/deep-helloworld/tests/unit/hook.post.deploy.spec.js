@@ -4,10 +4,14 @@ const hookPostDeploy = require('../../hook.post-deploy');
 
 describe('Check hook.post-deploy', () => {
   it('Test hook.post-deploy on update', done => {
-    let isUpdate = true;
+    let context = {
+      isUpdate: true,
+      microservice: {},
+      provisioning: {}
+    };
 
-    hookPostDeploy(function() {
+    hookPostDeploy.call(context, function() {
       done();
-    }).bind(this);
+    });
   });
 });

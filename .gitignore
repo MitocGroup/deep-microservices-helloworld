@@ -13,9 +13,6 @@
 .AppleDouble
 .LSOverride
 
-# IntelliJ
-/out/
-
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
@@ -146,6 +143,7 @@ npm-debug.log
 coverage
 coverages
 .coverage.*
+coverage.lcov
 
 shared-lib
 !backend/shared-lib
