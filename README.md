@@ -2,7 +2,7 @@ deep-microservices-helloworld
 =============================
 
 [![Build Status](https://travis-ci.org/MitocGroup/deep-microservices-helloworld.svg?branch=master)](https://travis-ci.org/MitocGroup/deep-microservices-helloworld)
-[![Test Coverage](https://codeclimate.com/repos/5798cf9cd42af178f8002e8b/badges/2cb29493963dff1709a0/coverage.svg)](https://codeclimate.com/repos/5798cf9cd42af178f8002e8b/coverage)
+[![Test Coverage](https://codeclimate.com/github/MitocGroup/deep-microservices-helloworld/badges/coverage.svg?maxAge=0)](https://codeclimate.com/github/MitocGroup/deep-microservices-helloworld)
 
 deep-microservices-helloworld is a very simple microservice designed to illustrate the basic syntax for
 constructing a web application built of top of [DEEP Framework](https://github.com/MitocGroup/deep-framework).
